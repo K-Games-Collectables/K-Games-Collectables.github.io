@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>K-Games&Collectables</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="K-Games&Collectables is a hobby/collectibles website/store that I'm building to share my love of games and collectibles with others."/>
+    <meta name="keywords" content="K-Games&Collectables, hobby, collectibles, games, tcg, mtg, board games"/>
+    <meta name="author" content="Kayden Cormier"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="author" content="Kayden Cormier" />
+    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="Normalize" href="styles/normalize.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+</head>
+
+<body class="body-class">
+
+    <header class="header-class">
+        <button class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <div class="title-div">
+            <h1>K-Games&Collectables Store</h1>
+        </div>
+
+        <div id="mode-toggle-container">
+            <button id="mode-toggle">
+                <img id="mode-icon" src="images/mode.png" alt="Toggle mode">
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav-class">
+        <div class="nav-list-div">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="blog.html">Blog/Updates</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="width-wrap">
+        <main class="main-class">
+            <section id="store">
+                <h3>Store Sections</h3>
+                <div class="tab">
+                    <button class="tablinks" onclick="openSection(event, 'Magic')">Magic: The Gathering</button>
+                    <button class="tablinks" onclick="openSection(event, 'Pokemon')">Pokemon</button>
+                    <button class="tablinks" onclick="openSection(event, 'Sports')">Sports</button>
+                    <button class="tablinks" onclick="openSection(event, 'BoardGames')">Board Games</button>
+                    <button class="tablinks" onclick="openSection(event, 'Accessories')">Accessories</button>
+                </div>
+
+                <div id="Magic" class="tabcontent">
+                    <h4>Magic: The Gathering</h4>
+                    <p>Explore our collection of Magic: The Gathering cards and more.</p>
+                </div>
+
+                <div id="Pokemon" class="tabcontent">
+                    <h4>Pokemon</h4>
+                    <p>Discover our range of Pokemon cards and merchandise.</p>
+                </div>
+
+                <div id="Sports" class="tabcontent">
+                    <h4>Sports</h4>
+                    <p>Check out our sports cards and memorabilia.</p>
+                </div>
+
+                <div id="BoardGames" class="tabcontent">
+                    <h4>Board Games</h4>
+                    <p>Find a variety of board games for all ages.</p>
+                </div>
+
+                <div id="Accessories" class="tabcontent">
+                    <h4>Accessories</h4>
+                    <p>Browse through our selection of card sleeves, board game accessories, and more.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div>
+        <button id="back-to-top" title="Back to top">⇡</button>
+    </div>
+
+    <footer class="footer-class">
+        <div class="foot">
+            <p id="copyright">Copyright © 2024 All rights reserved - K-Games&Collectables</p>
+        </div>
+    </footer>
+
+    <script src="scripts/copyright.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/darkmode.js"></script>
+    <script src="scripts/tabs.js"></script>
+</body>
+
+</html>
