@@ -10,6 +10,22 @@ function openSection(evt, sectionName) {
     }
     document.getElementById(sectionName).style.display = "block";
     evt.currentTarget.className += " active";
+
+    // Trigger Masonry layout update for the active section
+    var containerClass = sectionName.toLowerCase() + '-container';
+    var elem = document.querySelector('.' + containerClass);
+    if (elem) {
+        imagesLoaded(elem, function() {
+            var msnry = new Masonry(elem, {
+                itemSelector: '.product-info',
+                columnWidth: '.product-info',
+                percentPosition: true,
+                gutter: 20,
+                horizontalOrder: true
+            });
+            msnry.layout();
+        });
+    }
 }
 
 // Set default open tab

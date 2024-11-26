@@ -16,6 +16,8 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 </head>
 
 <body class="body-class">
@@ -56,33 +58,230 @@
                     <button class="tablinks" onclick="openSection(event, 'Pokemon')">Pokemon</button>
                     <button class="tablinks" onclick="openSection(event, 'Sports')">Sports</button>
                     <button class="tablinks" onclick="openSection(event, 'BoardGames')">Board Games</button>
+                    <button class="tablinks" onclick="openSection(event, 'D&D')">Dungeons & Dragons</button>
                     <button class="tablinks" onclick="openSection(event, 'Accessories')">Accessories</button>
                 </div>
 
                 <div id="Magic" class="tabcontent">
                     <h4>Magic: The Gathering</h4>
                     <p>Explore our collection of Magic: The Gathering cards and more.</p>
+                    <div class="magic-container">
+                        <!-- Square product embeds will go here -->
+                    </div>
                 </div>
 
                 <div id="Pokemon" class="tabcontent">
                     <h4>Pokemon</h4>
                     <p>Discover our range of Pokemon cards and merchandise.</p>
+                    <div class="pokemon-container">
+                        <div class="product-info" style="
+                        overflow: auto;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        align-items: center;
+                        width: 259px;
+                        background: #FFFFFF;
+                        border: 1px solid rgba(0, 0, 0, 0.1);
+                        box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                        border-radius: 10px;
+                        font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;
+                        ">
+                            <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/fcae4202621d01b3ea14308a0b12c6415204ea28/original.jpeg" alt="Pokemon Mystery Bag" onerror="this.style.display='none'" style="width: 100%;">
+                        <div style="padding: 20px;">
+                            <p style="
+                            font-size: 18px;
+                            line-height: 20px;
+                            ">Pokemon Mystery Bag</p>
+                            <p style="
+                            font-size: 18px;
+                            line-height: 20px;
+                            font-weight: 600;
+                            ">$15.69</p>
+                            <a target="_blank" href="https://square.link/u/hoQAYc1n?src=embed" style="
+                            display: inline-block;
+                            font-size: 18px;
+                            line-height: 48px;
+                            height: 48px;
+                            color: #ffffff;
+                            min-width: 212px;
+                            background-color: #E6013D;
+                            text-align: center;
+                            box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                            border-radius: 50px;
+                            ">Buy now</a>
+                        </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="Sports" class="tabcontent">
                     <h4>Sports</h4>
                     <p>Check out our sports cards and memorabilia.</p>
+                    <div class="sports-container">
+                        <!-- Square product embeds will go here -->
+                    </div>
                 </div>
 
                 <div id="BoardGames" class="tabcontent">
                     <h4>Board Games</h4>
                     <p>Find a variety of board games for all ages.</p>
+                    <div class="boardgames-container">
+                        <!-- Square product embeds will go here -->
+                    </div>
                 </div>
 
                 <div id="Accessories" class="tabcontent">
                     <h4>Accessories</h4>
                     <p>Browse through our selection of card sleeves, board game accessories, and more.</p>
+                    <div class="accessories-container">
+                        <!-- First Product: Toploaders -->
+                        <div class="product-info" style="
+                            overflow: auto;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            align-items: center;
+                            width: 259px;
+                            background: #FFFFFF;
+                            border: 1px solid rgba(0, 0, 0, 0.1);
+                            box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                            border-radius: 10px;
+                            font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;">
+                            <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/215bd1b9273f46e54613b8709024a412cc036dc5/original.png" 
+                                 alt="Ultra●PRO 25ct Toploaders" 
+                                 onerror="this.style.display='none'" 
+                                 style="width: 100%;">
+                            <div style="padding: 20px;">
+                                <p style="font-size: 18px; line-height: 20px;">Ultra●PRO 25ct Toploaders</p>
+                                <p style="font-size: 18px; line-height: 20px; font-weight: 600;">$6.49</p>
+                                <a target="_blank" 
+                                   href="https://square.link/u/AB5nrIXx?src=embed" 
+                                   style="display: inline-block;
+                                          font-size: 18px;
+                                          line-height: 48px;
+                                          height: 48px;
+                                          color: #ffffff;
+                                          min-width: 212px;
+                                          background-color: #E6013D;
+                                          text-align: center;
+                                          box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                                          border-radius: 50px;">Buy now</a>
+                            </div>
+                        </div>
+                    
+                        <!-- Second Product: Ultra PRO 100 Sleeves -->
+                        <div class="product-info" style="
+                            overflow: auto;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            align-items: center;
+                            width: 259px;
+                            background: #FFFFFF;
+                            border: 1px solid rgba(0, 0, 0, 0.1);
+                            box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                            border-radius: 10px;
+                            font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;">
+                            <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/7f5c7e855312997c8ee56c7d7919248e47aa3f54/original.jpeg" 
+                                 alt="Ultra●PRO 100 sleeves" 
+                                 onerror="this.style.display='none'" 
+                                 style="width: 100%;">
+                            <div style="padding: 20px;">
+                                <p style="font-size: 18px; line-height: 20px;">Ultra●PRO 100 sleeves</p>
+                                <p style="font-size: 18px; line-height: 20px; font-weight: 600;">$3.00</p>
+                                <a target="_blank" 
+                                   href="https://square.link/u/iLtDh9vB?src=embed" 
+                                   style="display: inline-block;
+                                          font-size: 18px;
+                                          line-height: 48px;
+                                          height: 48px;
+                                          color: #ffffff;
+                                          min-width: 212px;
+                                          background-color: #E6013D;
+                                          text-align: center;
+                                          box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                                          border-radius: 50px;">Buy now</a>
+                            </div>
+                        </div>
+                    
+                        <!-- Test Product -->
+                        <div class="product-info" style="
+                            overflow: auto;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            align-items: center;
+                            width: 259px;
+                            background: #FFFFFF;
+                            border: 1px solid rgba(0, 0, 0, 0.1);
+                            box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                            border-radius: 10px;
+                            font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;">
+                            <div style="padding: 20px;">
+                                <p style="font-size: 18px; line-height: 20px;">test</p>
+                                <p style="font-size: 18px; line-height: 20px; font-weight: 600;">Free</p>
+                                <a target="_blank" 
+                                   href="https://square.link/u/2qDYdunz?src=embed" 
+                                   style="display: inline-block;
+                                          font-size: 18px;
+                                          line-height: 48px;
+                                          height: 48px;
+                                          color: #ffffff;
+                                          min-width: 212px;
+                                          background-color: #E6013D;
+                                          text-align: center;
+                                          box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                                          border-radius: 50px;">Buy now</a>
+                            </div>
+                        </div>
+                    
+                        <!-- Third Product: 1000pk Sleeves -->
+                        <div class="product-info" style="
+                            overflow: auto;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            align-items: center;
+                            width: 259px;
+                            background: #FFFFFF;
+                            border: 1px solid rgba(0, 0, 0, 0.1);
+                            box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                            border-radius: 10px;
+                            font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;">
+                            <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/7b1c5e9e759e169a7e0225e8550610e793ba6830/original.jpeg" 
+                                 alt="1000pk Sleeves" 
+                                 onerror="this.style.display='none'" 
+                                 style="width: 100%;">
+                            <div style="padding: 20px;">
+                                <p style="font-size: 18px; line-height: 20px;">1000pk Sleeves</p>
+                                <p style="font-size: 18px; line-height: 20px; font-weight: 600;">$27.50</p>
+                                <a target="_blank" 
+                                   href="https://square.link/u/q7D6FuDs?src=embed" 
+                                   style="display: inline-block;
+                                          font-size: 18px;
+                                          line-height: 48px;
+                                          height: 48px;
+                                          color: #ffffff;
+                                          min-width: 212px;
+                                          background-color: #E6013D;
+                                          text-align: center;
+                                          box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                                          border-radius: 50px;">Buy now</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <div id="D&D" class="tabcontent">
+                    <h4>Dungeons & Dragons</h4>
+                    <p>Explore our collection of Dungeons & Dragons books and more.</p>
+                    <div class="dnd-container">
+                        <!-- Square product embeds will go here -->
+                    </div>
+                </div>
+
+            
             </section>
         </main>
     </div>
@@ -101,6 +300,34 @@
     <script src="scripts/hamburger.js"></script>
     <script src="scripts/darkmode.js"></script>
     <script src="scripts/tabs.js"></script>
+    <script>
+        function openSection(evt, sectionName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(sectionName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+            // Trigger Masonry layout update
+            var elem = document.querySelector('.accessories-container');
+            if (elem) {
+                imagesLoaded(elem, function() {
+                    var msnry = new Masonry(elem, {
+                        itemSelector: '.product-info',
+                        columnWidth: '.product-info',
+                        percentPosition: true
+                    });
+                    msnry.layout();
+                });
+            }
+        }
+    </script>
 </body>
 
 </html>

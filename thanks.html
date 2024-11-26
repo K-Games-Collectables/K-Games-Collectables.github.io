@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Thank You - K-Games&Collectables</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Thank you for your purchase at K-Games&Collectables"/>
+    <meta name="keywords" content="K-Games&Collectables, hobby, collectibles, games, tcg, mtg, board games"/>
+    <meta name="author" content="Kayden Cormier"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="Normalize" href="styles/normalize.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+</head>
+
+<body class="body-class">
+    <header class="header-class">
+        <button class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <div class="title-div">
+            <h1>Thank You!</h1>
+        </div>
+    
+        <div id="mode-toggle-container">
+            <button id="mode-toggle">
+                <img id="mode-icon" src="images/mode.png" alt="Toggle mode">
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav-class">
+        <div class="nav-list-div">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="blog.html">Blog/Updates</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="width-wrap">
+        <main class="main-class">
+            <section class="thank-you-section">
+                <h2>Thank You for Your Purchase!</h2>
+                <p>Your order has been successfully processed. You will receive a confirmation email shortly.</p>
+                
+                <div class="order-details">
+                    <h3>Order Information</h3>
+                    <p>Order ID: <span id="orderId">Loading...</span></p>
+                    <p>Transaction ID: <span id="transactionId">Loading...</span></p>
+                </div>
+
+                <div class="next-steps">
+                    <h3>What's Next?</h3>
+                    <ul>
+                        <li>Check your email for your order confirmation from Square</li>
+                        <li>You'll receive a follow-up email with your tracking number once your order ships</li>
+                        <li>Keep an eye on your inbox for updates about your order</li>
+                        <li>Feel free to contact us if you have any questions while waiting for your order</li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <h3>Need Help?</h3>
+                    <p>If you have any questions about your order, please don't hesitate to contact us:</p>
+                    <p>Email: <a href="mailto:support@kgamesncollectables.com">support@kgamesncollectables.com</a></p>
+                    <p>Phone: <a href="tel:+17059993771">+1 (705) 999-3771</a></p>
+                    <p class="shipping-note">Note: Tracking information will be sent in a separate email once your order ships. This typically happens within 1-2 business days.</p>
+                </div>
+                <div class="return-links">
+                    <p><a href="store.html">Return to Store</a> | <a href="index.html">Return to Homepage</a></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div>
+        <button id="back-to-top" title="Back to top">⇡</button>
+    </div>
+
+    <footer class="footer-class">
+        <div class="foot">
+            <p id="copyright">Copyright © 2024 All rights reserved - K-Games&Collectables</p>
+        </div>
+    </footer>
+
+    <script src="scripts/copyright.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/darkmode.js"></script>
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Get and display the order details
+        document.addEventListener('DOMContentLoaded', function() {
+            const orderId = getUrlParameter('orderId');
+            const transactionId = getUrlParameter('transactionId');
+
+            if (orderId) {
+                document.getElementById('orderId').textContent = orderId;
+            } else {
+                document.getElementById('orderId').textContent = 'Not available';
+            }
+
+            if (transactionId) {
+                document.getElementById('transactionId').textContent = transactionId;
+            } else {
+                document.getElementById('transactionId').textContent = 'Not available';
+            }
+
+            // Hide order details section if no parameters are present
+            if (!orderId && !transactionId) {
+                document.querySelector('.order-details').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

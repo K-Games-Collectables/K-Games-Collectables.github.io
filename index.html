@@ -65,6 +65,88 @@
                 <p>If you would like to purchase a bunch of items, you may contact me through the contact page or through my <a href="mailto:support@kgamesncollctables.com">email</a>, and I will be able to create an invoice for your order!</p>
                 <br/>
                 <p>So for now, enjoy the site, and check back often for new content!</p>
+                <br/>
+                <p>Last updated: 2024-11-25</p>
+                <br/>
+                <p>~Kayden</p>
+
+                <p>If you wish to support the development of this site, you can do so at my <a href="https://buymeacoffee.com/kaydonbob03">Buy Me a Coffee</a> page or click the button below!</p>
+                <div>
+                    <div class="product-info" style="
+                    overflow: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+                    width: 259px;
+                    background: #FFFFFF;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                    border-radius: 10px;
+                    font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;
+                    text-align: center;
+                    ">
+                    <div style="padding: 20px;">
+                        <p style="
+                      font-size: 18px;
+                      line-height: 20px;
+                    ">Help Support Our Small Business!</p>
+                        <p style="
+                      font-size: 18px;
+                      line-height: 20px;
+                      font-weight: 600;
+                    "></p>
+                      <a target="_blank" data-url="https://square.link/u/c6R7qUSw?src=embd" href="https://square.link/u/c6R7qUSw?src=embed" style="
+                      display: inline-block;
+                      font-size: 18px;
+                      line-height: 48px;
+                      height: 48px;
+                      color: #ffffff;
+                      min-width: 212px;
+                      background-color: #E6013D;
+                      text-align: center;
+                      box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                      border-radius: 50px;
+                    ">Donate</a>
+                    </div>
+                  </div>
+                  
+                  
+                    <script>
+                      function showCheckoutWindow(e) {
+                        e.preventDefault();
+                  
+                        const url = document.getElementById('embedded-checkout-modal-checkout-button').getAttribute('data-url');
+                        const title = 'Square Payment Links';
+                  
+                        // Some platforms embed in an iframe, so we want to top window to calculate sizes correctly
+                        const topWindow = window.top ? window.top : window;
+                  
+                        // Fixes dual-screen position                                Most browsers          Firefox
+                        const dualScreenLeft = topWindow.screenLeft !==  undefined ? topWindow.screenLeft : topWindow.screenX;
+                        const dualScreenTop = topWindow.screenTop !==  undefined   ? topWindow.screenTop  : topWindow.screenY;
+                  
+                        const width = topWindow.innerWidth ? topWindow.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+                        const height = topWindow.innerHeight ? topWindow.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+                  
+                        const h = height * .75;
+                        const w = 500;
+                  
+                        const systemZoom = width / topWindow.screen.availWidth;
+                        const left = (width - w) / 2 / systemZoom + dualScreenLeft;
+                        const top = (height - h) / 2 / systemZoom + dualScreenTop;
+                        const newWindow = window.open(url, title, `scrollbars=yes, width=${w / systemZoom}, height=${h / systemZoom}, top=${top}, left=${left}`);
+                  
+                        if (window.focus) newWindow.focus();
+                      }
+                  
+                      // This overrides the default checkout button click handler to show the embed modal
+                      // instead of opening a new tab with the given link url
+                      document.getElementById('embedded-checkout-modal-checkout-button').addEventListener('click', function (e) {
+                        showCheckoutWindow(e);
+                      });
+                    </script>
+                  </div>
             </div>
         </main>
     </div>

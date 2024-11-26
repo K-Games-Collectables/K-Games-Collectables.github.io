@@ -362,3 +362,126 @@ body.dark-mode .tabcontent button {
 body.dark-mode .tabcontent {
     color: var(--text-color-dark);
 }
+
+.product-info {
+    background-color: var(--background-color-dark) !important;
+    color: var(--text-color-dark) !important;
+    padding: 5px;
+}
+
+body.dark-mode .product-info {
+    color: var(--text-color-light) !important;
+    background-color: var(--background-color-light) !important;
+}
+
+.accessories-container,
+.pokemon-container,
+.magic-container,
+.sports-container,
+.boardgames-container,
+.dnd-container {
+    padding: 10px;  /* Add padding around the container */
+}
+
+.product-info {
+    margin-bottom: 20px !important;  /* Force spacing between rows */
+}
+
+.thank-you-section {
+    text-align: center;
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.thank-you-section h2 {
+    color: var(--header-footer-color-light);
+    margin-bottom: 1em;
+}
+
+.next-steps, .contact-info {
+    margin: 2em 0;
+    text-align: left;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: rgba(230, 1, 61, 0.1);
+}
+
+.next-steps ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.next-steps li {
+    margin: 1em 0;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.next-steps li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--header-footer-color-light);
+}
+
+.return-links {
+    margin-top: 2em;
+}
+
+.return-links a {
+    color: var(--header-footer-color-light);
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border: 2px solid var(--header-footer-color-light);
+    border-radius: 4px;
+    margin: 0 0.5em;
+    transition: all 0.3s ease;
+}
+
+.return-links a:hover {
+    background-color: var(--header-footer-color-light);
+    color: white;
+}
+
+.order-details {
+    margin: 2em 0;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: rgba(230, 1, 61, 0.1);
+    text-align: left;
+}
+
+.order-details p {
+    margin: 0.5em 0;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.order-details span {
+    font-weight: bold;
+    color: var(--header-footer-color-light);
+}
+
+body.dark-mode .order-details span {
+    color: var(--header-footer-color-dark);
+}
+
+.shipping-note {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 1em;
+    padding: 0.5em;
+    background-color: rgba(230, 1, 61, 0.05);
+    border-radius: 4px;
+}
+
+/* Add these container classes */
+.magic-container,
+.pokemon-container,
+.sports-container,
+.boardgames-container,
+.dnd-container,
+.accessories-container {
+    width: 100%;
+}
