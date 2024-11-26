@@ -485,3 +485,99 @@ body.dark-mode .order-details span {
 .accessories-container {
     width: 100%;
 }
+
+/* Sub-tab styles */
+.sub-tab {
+    overflow: hidden;
+    border: 1px solid var(--header-footer-color-light);
+    background-color: var(--background-color-light);
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+body.dark-mode .sub-tab {
+    border-color: var(--header-footer-color-dark);
+    background-color: var(--background-color-dark);
+}
+
+.sub-tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 12px;
+    transition: 0.3s;
+    font-size: 15px;
+    color: var(--text-color-light);
+}
+
+body.dark-mode .sub-tab button {
+    color: var(--text-color-dark);
+}
+
+.sub-tab button:hover {
+    background-color: var(--header-footer-color-light);
+    color: #FFFFFF;
+}
+
+.sub-tab button.active {
+    background-color: var(--header-footer-color-light);
+    color: #FFFFFF;
+}
+
+body.dark-mode .sub-tab button:hover,
+body.dark-mode .sub-tab button.active {
+    background-color: var(--header-footer-color-dark);
+}
+
+.sub-tabcontent {
+    display: none;
+    padding: 12px;
+    border: 1px solid var(--header-footer-color-light);
+    border-top: none;
+    margin-bottom: 15px;
+    background-color: var(--background-color-light);
+    border-radius: 0 0 4px 4px;
+}
+
+body.dark-mode .sub-tabcontent {
+    border-color: var(--header-footer-color-dark);
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+/* Add consistent heading styles */
+.tabcontent h5,
+.sub-tabcontent h6 {
+    color: var(--header-footer-color-light);
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+body.dark-mode .tabcontent h5,
+body.dark-mode .sub-tabcontent h6 {
+    color: var(--header-footer-color-dark);
+}
+
+/* Nested sub-tab styles */
+.sub-tabcontent .sub-tab {
+    margin-top: 10px;
+    border-color: rgba(230, 1, 61, 0.5);
+}
+
+.sub-tabcontent .sub-tab button {
+    font-size: 14px;
+    padding: 8px 10px;
+}
+
+/* Indent nested content */
+.sub-tabcontent .sub-tabcontent {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Smaller headings for deeper nesting */
+.sub-tabcontent .sub-tabcontent h6 {
+    font-size: 0.9em;
+}
