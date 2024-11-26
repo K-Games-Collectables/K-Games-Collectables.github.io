@@ -54,12 +54,20 @@
             <section id="store">
                 <h3>Store Sections</h3>
                 <div class="tab">
+                    <button class="tablinks" onclick="openSection(event, 'AboutUs')">About Us</button>
                     <button class="tablinks" onclick="openSection(event, 'Magic')">Magic: The Gathering</button>
                     <button class="tablinks" onclick="openSection(event, 'Pokemon')">Pokemon</button>
                     <button class="tablinks" onclick="openSection(event, 'Sports')">Sports</button>
                     <button class="tablinks" onclick="openSection(event, 'BoardGames')">Board Games</button>
-                    <button class="tablinks" onclick="openSection(event, 'D&D')">Dungeons & Dragons</button>
+                    <button class="tablinks" onclick="openSection(event, 'D&D')">D&D</button>
                     <button class="tablinks" onclick="openSection(event, 'Accessories')">Accessories</button>
+                </div>
+
+                <div id="AboutUs" class="tabcontent">
+                    <h4>Welcome to My Store!</h4>
+                    <p>Hi there! I'm thrilled to share my passion for trading cards, board games, and collectibles with you. As a sole proprietor, I take pride in curating a diverse selection of products that cater to both enthusiasts and collectors.</p>
+                    <p>Whether you're a seasoned player or just starting your journey, we have something special for everyone. Feel free to explore the categories and find the perfect addition to your collection or a thoughtful gift for a fellow fan.</p>
+                    <p>Thank you for visiting my store. Your support means the world to me, and I hope you enjoy your shopping experience!</p>
                 </div>
 
                 <div id="Magic" class="tabcontent">
@@ -591,25 +599,100 @@
                     <p>Browse through our selection of card sleeves, board game accessories, and more.</p>
                     
                     <div class="sub-tab">
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'Protection')">Card Protection</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'Storage')">Storage</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'Display')">Display</button>
+                        <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'CardProtection')">Card Protection</button>
+                        <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'CardStorage')">Storage</button>
+                        <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'CardDisplay')">Display</button>
                         <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'Gaming')">Gaming Accessories</button>
                     </div>
 
-                    <div id="Accessories-Protection" class="sub-tabcontent">
+                    <div id="Accessories-CardProtection" class="sub-tabcontent">
                         <h5>Card Protection</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Protection', 'Sleeves')">Sleeves</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Protection', 'Toploaders')">Toploaders</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Protection', 'Other')">Other Protection</button>
+                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardProtection', 'Sleeves')">Sleeves</button>
+                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardProtection', 'Toploaders')">Toploaders</button>
+                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardProtection', 'Other')">Other Protection</button>
                         </div>
 
-                        <div id="Protection-Toploaders" class="sub-tabcontent">
+                        <div id="CardProtection-Sleeves" class="sub-tabcontent">
+                            <h6>Card Sleeves</h6>
+                            <div class="sleeves-container">
+                                <!-- Ultra pro 100ct penny sleeves -->
+                                <div class="product-info" style="
+                                    overflow: auto;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    width: 259px;
+                                    background: #FFFFFF;
+                                    border: 1px solid rgba(0, 0, 0, 0.1);
+                                    box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                                    border-radius: 10px;
+                                    font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;">
+                                    <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/7f5c7e855312997c8ee56c7d7919248e47aa3f54/original.jpeg" 
+                                         alt="Ultra●PRO 100 sleeves" 
+                                         onerror="this.style.display='none'" 
+                                         style="width: 100%;">
+                                    <div style="padding: 20px;">
+                                        <p style="font-size: 18px; line-height: 20px;">Ultra●PRO 100 sleeves</p>
+                                        <p style="font-size: 18px; line-height: 20px; font-weight: 600;">$3.00</p>
+                                        <a target="_blank" 
+                                           href="https://square.link/u/iLtDh9vB?src=embed" 
+                                           style="display: inline-block;
+                                                  font-size: 18px;
+                                                  line-height: 48px;
+                                                  height: 48px;
+                                                  color: #ffffff;
+                                                  min-width: 212px;
+                                                  background-color: #E6013D;
+                                                  text-align: center;
+                                                  box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                                                  border-radius: 50px;">Buy now</a>
+                                    </div>
+                                </div>
+
+                                <!-- 1000ct rigid soft sleeves -->
+                                <div class="product-info" style="
+                                    overflow: auto;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    width: 259px;
+                                    background: #FFFFFF;
+                                    border: 1px solid rgba(0, 0, 0, 0.1);
+                                    box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                                    border-radius: 10px;
+                                    font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;">
+                                    <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/7b1c5e9e759e169a7e0225e8550610e793ba6830/original.jpeg" 
+                                         alt="1000pk Sleeves" 
+                                         onerror="this.style.display='none'" 
+                                         style="width: 100%;">
+                                    <div style="padding: 20px;">
+                                        <p style="font-size: 18px; line-height: 20px;">1000pk Sleeves</p>
+                                        <p style="font-size: 18px; line-height: 20px; font-weight: 600;">$27.50</p>
+                                        <a target="_blank" 
+                                           href="https://square.link/u/q7D6FuDs?src=embed" 
+                                           style="display: inline-block;
+                                                  font-size: 18px;
+                                                  line-height: 48px;
+                                                  height: 48px;
+                                                  color: #ffffff;
+                                                  min-width: 212px;
+                                                  background-color: #E6013D;
+                                                  text-align: center;
+                                                  box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                                                  border-radius: 50px;">Buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="CardProtection-Toploaders" class="sub-tabcontent">
                             <h6>Toploaders</h6>
                             <div class="toploaders-container">
-                                <!-- Moving your existing toploader product here -->
+                                <!-- Ultra●PRO 25ct Toploaders -->
                                 <div class="product-info" style="
                                     overflow: auto;
                                     display: flex;
@@ -644,82 +727,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><div id="Protection-Sleeves" class="sub-tabcontent">
-                            <h6>Card Sleeves</h6>
-                            <div class="sleeves-container">
-                                <!-- UltraPRO Sleeves 100ct -->
-                                <div class="product-info" style="
-                                    overflow: auto;
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    width: 259px;
-                                    background: #FFFFFF;
-                                    border: 1px solid rgba(0, 0, 0, 0.1);
-                                    box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
-                                    border-radius: 10px;
-                                    font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;">
-                                    <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/215bd1b9273f46e54613b8709024a412cc036dc5/original.png" 
-                                         alt="Ultra●PRO 100ct Sleeves" 
-                                         onerror="this.style.display='none'" 
-                                         style="width: 100%;">
-                                    <div style="padding: 20px;">
-                                        <p style="font-size: 18px; line-height: 20px;">Ultra●PRO 100ct Sleeves</p>
-                                        <p style="font-size: 18px; line-height: 20px; font-weight: 600;">$2.99</p>
-                                        <a target="_blank" 
-                                           href="https://square.link/u/AB5nrIXx?src=embed" 
-                                           style="display: inline-block;
-                                                  font-size: 18px;
-                                                  line-height: 48px;
-                                                  height: 48px;
-                                                  color: #ffffff;
-                                                  min-width: 212px;
-                                                  background-color: #E6013D;
-                                                  text-align: center;
-                                                  box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
-                                                  border-radius: 50px;">Buy now</a>
-                                    </div>
-                                </div>
-                        
-                                <!-- Other Sleeves 1000ct -->
-                                <div class="product-info" style="
-                                    overflow: auto;
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    width: 259px;
-                                    background: #FFFFFF;
-                                    border: 1px solid rgba(0, 0, 0, 0.1);
-                                    box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
-                                    border-radius: 10px;
-                                    font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;">
-                                    <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/215bd1b9273f46e54613b8709024a412cc036dc5/original.png" 
-                                         alt="Dragon Shield 100ct Sleeves" 
-                                         onerror="this.style.display='none'" 
-                                         style="width: 100%;">
-                                    <div style="padding: 20px;">
-                                        <p style="font-size: 18px; line-height: 20px;">Dragon Shield 100ct Sleeves</p>
-                                        <p style="font-size: 18px; line-height: 20px; font-weight: 600;">$13.99</p>
-                                        <a target="_blank" 
-                                           href="https://square.link/u/AB5nrIXx?src=embed" 
-                                           style="display: inline-block;
-                                                  font-size: 18px;
-                                                  line-height: 48px;
-                                                  height: 48px;
-                                                  color: #ffffff;
-                                                  min-width: 212px;
-                                                  background-color: #E6013D;
-                                                  text-align: center;
-                                                  box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
-                                                  border-radius: 50px;">Buy now</a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
 
-                        <div id="Protection-Other" class="sub-tabcontent">
+                        <div id="CardProtection-Other" class="sub-tabcontent">
                             <h6>Other Protection Products</h6>
                             <div class="other-protection-container">
                                 <!-- Other protection products here -->
@@ -727,13 +737,13 @@
                         </div>
                     </div>
 
-                    <div id="Accessories-Storage" class="sub-tabcontent">
+                    <div id="Accessories-CardStorage" class="sub-tabcontent">
                         <h5>Storage Solutions</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Storage', 'Boxes')">Storage Boxes</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Storage', 'Binders')">Binders</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Storage', 'Cases')">Cases</button>
+                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardStorage', 'Boxes')">Storage Boxes</button>
+                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardStorage', 'Binders')">Binders</button>
+                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardStorage', 'Cases')">Cases</button>
                         </div>
 
                         <div id="Storage-Boxes" class="sub-tabcontent">
@@ -758,13 +768,13 @@
                         </div>
                     </div>
 
-                    <div id="Accessories-Display" class="sub-tabcontent">
+                    <div id="Accessories-CardDisplay" class="sub-tabcontent">
                         <h5>Display Items</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Display', 'Stands')">Card Stands</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Display', 'Frames')">Frames</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Display', 'Mats')">Play Mats</button>
+                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardDisplay', 'Stands')">Card Stands</button>
+                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardDisplay', 'Frames')">Frames</button>
+                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardDisplay', 'Mats')">Play Mats</button>
                         </div>
 
                         <div id="Display-Stands" class="sub-tabcontent">
