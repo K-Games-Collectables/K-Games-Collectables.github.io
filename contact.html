@@ -17,6 +17,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
@@ -56,11 +58,11 @@
                 <div class="contact-details">
                     <p>Email: <a href="mailto:support@kgamesncollectables.com">support@kgamesncollectables.com</a></p>
                     <p>Phone: <a href="tel:+17059993771">+1 (705) 999-3771</a></p>
-                    <p>Ebay: <a href="https://ebay.kgamesncollectables.com" target="_blank">K-Games&Collectables Ebay</a></p>
+                    <p>Ebay: <a href="https://www.ebay.ca/usr/k-gamesncollectables" target="_blank">K-Games&Collectables Ebay</a></p>
                     <p>Type your message below and I will get back to you as soon as possible.</p>
-                    <p>Typical response time: ~1 hour</p>
+                    <p class="response-time">Typical response time: ~1 hour</p>
                 </div>
-                <form class="contact-form" action="https://formspree.io/f/mzzbgnda" method="POST">
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/mzzbgnda" method="POST">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" placeholder="John Doe" required>
 
@@ -92,6 +94,69 @@
     <script src="scripts/darkmode.js"></script>
     <script src="scripts/accordion.js"></script>
     <script src="scripts/top.js"></script>
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Check if reCAPTCHA is completed
+        if (grecaptcha.getResponse() === '') {
+            Swal.fire({
+                title: 'Oops!',
+                text: 'Please complete the reCAPTCHA verification',
+                icon: 'error',
+                confirmButtonColor: '#E6013D'
+            });
+            return;
+        }
+
+        // Get form data
+        const formData = new FormData(this);
+        
+        // Show loading state
+        Swal.fire({
+            title: 'Sending...',
+            text: 'Please wait while we send your message',
+            allowOutsideClick: false,
+            showConfirmButton: false,
+            willOpen: () => {
+                Swal.showLoading();
+            }
+        });
+
+        // Submit the form
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            Swal.fire({
+                title: 'Thank You!',
+                text: 'Your message has been sent successfully. I will get back to you soon!',
+                icon: 'success',
+                confirmButtonColor: '#E6013D'
+            });
+            this.reset();
+            grecaptcha.reset();
+        })
+        .catch(error => {
+            Swal.fire({
+                title: 'Oops!',
+                text: 'Something went wrong. Please try again later.',
+                icon: 'error',
+                confirmButtonColor: '#E6013D'
+            });
+        });
+    });
+
+    // Add dark mode detection for SweetAlert
+    if (document.body.classList.contains('dark-mode')) {
+        Swal.getContainer().classList.add('swal2-dark');
+    }
+    </script>
 </body>
 
 </html>
