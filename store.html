@@ -1022,6 +1022,75 @@
             }
         }
     </script>
+    <script>
+        window.onload = function() {
+            const hash = window.location.hash;
+            if (hash) {
+                const parts = hash.split('#').filter(Boolean);
+                if (parts.length > 0) {
+                    const mainSection = parts[0]; // e.g., 'Pokemon'
+                    const subSection = parts[1]; // e.g., 'Sealed'
+                    const subSubSection = parts[2]; // e.g., 'Mystery'
+
+                    console.log(`Main Section: ${mainSection}, Sub Section: ${subSection}, Sub Sub Section: ${subSubSection}`);
+
+                    // Open the main section
+                    openSection(event, mainSection);
+
+                    // Open the sub-section if it exists
+                    if (subSection) {
+                        const subSectionButton = document.querySelector(`.sub-tablinks[onclick*="${subSection}"]`);
+                        if (subSectionButton) {
+                            console.log(`Clicking Sub Section Button: ${subSectionButton.innerText}`);
+                            subSectionButton.click();
+                        } else {
+                            console.error(`Sub Section Button not found for: ${subSection}`);
+                        }
+                    }
+
+                    // Open the sub-sub-section if it exists
+                    if (subSubSection) {
+                        const subSubSectionButton = document.querySelector(`.sub-tablinks[onclick*="${subSubSection}"]`);
+                        if (subSubSectionButton) {
+                            console.log(`Clicking Sub Sub Section Button: ${subSubSectionButton.innerText}`);
+                            subSubSectionButton.click();
+                        } else {
+                            console.error(`Sub Sub Section Button not found for: ${subSubSection}`);
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <script>
+        function openSubSection(evt, parentSection, subSectionName) {
+            // Hide all sub-tab contents
+            var subTabContents = document.querySelectorAll(`#${parentSection} .sub-tabcontent`);
+            subTabContents.forEach(content => content.style.display = "none");
+
+            // Show the selected sub-tab content
+            var selectedSubTabContent = document.getElementById(`${parentSection}-${subSectionName}`);
+            if (selectedSubTabContent) {
+                selectedSubTabContent.style.display = "block";
+            }
+
+            // Update Masonry layout for the active section
+            var containerClass = subSectionName.toLowerCase() + '-container';
+            var elem = document.querySelector(`#${parentSection}-${subSectionName} .${containerClass}`);
+            if (elem) {
+                imagesLoaded(elem, function() {
+                    var msnry = new Masonry(elem, {
+                        itemSelector: '.product-info',
+                        columnWidth: '.product-info',
+                        percentPosition: true,
+                        gutter: 20,
+                        horizontalOrder: true
+                    });
+                    msnry.layout();
+                });
+            }
+        }
+    </script>
 </body>
 
 </html>

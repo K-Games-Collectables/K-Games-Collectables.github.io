@@ -47,6 +47,7 @@ async function loadPosts() {
         const contentDiv = document.createElement('div');
         contentDiv.className = 'post-content';
         contentDiv.innerHTML = htmlContent;
+        contentDiv.style.display = 'none'; // Initially hide content
         
         // Toggle display on click
         titleDiv.onclick = () => {
@@ -56,6 +57,26 @@ async function loadPosts() {
         postDiv.appendChild(titleDiv);
         postDiv.appendChild(contentDiv);
         postsContainer.appendChild(postDiv);
+    }
+
+    // Check for hash in URL and expand the corresponding post
+    const hash = window.location.hash;
+    if (hash) {
+        const postDate = hash.substring(1); // Remove the '#' character
+        console.log(`Looking for post with date: ${postDate}`);
+        
+        // Find the post that matches the date in the filename
+        const postToExpand = Array.from(postsContainer.getElementsByClassName('post-title')).find((titleDiv, index) => {
+            const postFilename = posts[index]; // Get the corresponding post filename
+            return postFilename.includes(postDate); // Check if the filename contains the date
+        });
+        
+        if (postToExpand) {
+            console.log(`Expanding post: ${postToExpand.textContent}`);
+            postToExpand.click(); // Simulate a click to expand the post
+        } else {
+            console.error(`No post found for date: ${postDate}`);
+        }
     }
 }
 
