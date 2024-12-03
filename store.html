@@ -54,13 +54,13 @@
             <section id="store">
                 <h3>Store Sections</h3>
                 <div class="tab">
-                    <button class="tablinks" onclick="openSection(event, 'AboutUs')">About Us</button>
-                    <button class="tablinks" onclick="openSection(event, 'Magic')">Magic: The Gathering</button>
-                    <button class="tablinks" onclick="openSection(event, 'Pokemon')">Pokemon</button>
-                    <button class="tablinks" onclick="openSection(event, 'Sports')">Sports</button>
-                    <button class="tablinks" onclick="openSection(event, 'BoardGames')">Board Games</button>
-                    <button class="tablinks" onclick="openSection(event, 'D&D')">D&D</button>
-                    <button class="tablinks" onclick="openSection(event, 'Accessories')">Accessories</button>
+                    <button class="tablinks" onclick="openTabSection(event, 'AboutUs')">About Us</button>
+                    <button class="tablinks" onclick="openTabSection(event, 'Magic')">Magic: The Gathering</button>
+                    <button class="tablinks" onclick="openTabSection(event, 'Pokemon')">Pokemon</button>
+                    <button class="tablinks" onclick="openTabSection(event, 'Sports')">Sports</button>
+                    <button class="tablinks" onclick="openTabSection(event, 'BoardGames')">Board Games</button>
+                    <button class="tablinks" onclick="openTabSection(event, 'D&D')">D&D</button>
+                    <button class="tablinks" onclick="openTabSection(event, 'Accessories')">Accessories</button>
                 </div>
 
                 <div id="AboutUs" class="tabcontent">
@@ -75,9 +75,9 @@
                     <p>Explore our collection of Magic: The Gathering cards and more.</p>
                     
                     <div class="sub-tab">
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Magic', 'Singles')">Singles</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Magic', 'Sealed')">Sealed Product</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Magic', 'Bundles')">Bundles</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Magic', 'Singles')">Singles</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Magic', 'Sealed')">Sealed Product</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Magic', 'Bundles')">Bundles</button>
                     </div>
 
                     <div id="Magic-Singles" class="sub-tabcontent">
@@ -107,19 +107,19 @@
                     <p>Discover our range of Pokemon cards and merchandise.</p>
                     
                     <div class="sub-tab">
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Pokemon', 'Singles')">Singles</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Pokemon', 'Sealed')">Sealed Product</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Pokemon', 'Special')">Special Sets</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Pokemon', 'Accessories')">Accessories</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Pokemon', 'Singles')">Singles</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Pokemon', 'Sealed')">Sealed Product</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Pokemon', 'SpecialSets')">Special Sets</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Pokemon', 'Accessories')">Accessories</button>
                     </div>
 
                     <div id="Pokemon-Singles" class="sub-tabcontent">
                         <h5>Singles</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Singles', 'Modern')">Modern</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Singles', 'Vintage')">Vintage</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Singles', 'Japanese')">Japanese</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Singles', 'Modern')">Modern</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Singles', 'Vintage')">Vintage</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Singles', 'Japanese')">Japanese</button>
                         </div>
 
                         <div id="Singles-Modern" class="sub-tabcontent">
@@ -148,10 +148,10 @@
                         <h5>Sealed Product</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Sealed', 'Boosters')">Booster Packs</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Sealed', 'ETB')">Elite Trainer Boxes</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Sealed', 'Collections')">Collections</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Sealed', 'Mystery')">Mystery Products</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Sealed', 'Boosters')">Booster Packs</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Sealed', 'ETB')">Elite Trainer Boxes</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Sealed', 'Collections')">Collections</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Sealed', 'Mystery')">Mystery Products</button>
                         </div>
 
                         <div id="Sealed-Boosters" class="sub-tabcontent">
@@ -220,8 +220,8 @@
                         <h5>Special Sets</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Special', 'McDonalds')">McDonald's 2024</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Special', 'Other')">Other Promos</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Special', 'McDonalds')">McDonald's 2024</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Special', 'Other')">Other Promos</button>
                         </div>
 
                         <div id="Special-McDonalds" class="sub-tabcontent">
@@ -243,9 +243,9 @@
                         <h5>Pokemon Accessories</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'Storage')">Storage</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'Protection')">Protection</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'Display')">Display</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'Storage')">Storage</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'Protection')">Protection</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'Display')">Display</button>
                         </div>
 
                         <div id="Accessories-Storage" class="sub-tabcontent">
@@ -276,10 +276,10 @@
                     <p>Check out our sports cards and memorabilia.</p>
                     
                     <div class="sub-tab">
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Sports', 'Hockey')">Hockey</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Sports', 'Baseball')">Baseball</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Sports', 'Basketball')">Basketball</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Sports', 'Football')">Football</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Sports', 'Hockey')">Hockey</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Sports', 'Baseball')">Baseball</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Sports', 'Basketball')">Basketball</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Sports', 'Football')">Football</button>
                     </div>
 
                     <div id="Sports-Hockey" class="sub-tabcontent">
@@ -287,10 +287,10 @@
                         
                         <!-- Hockey sub-categories -->
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Hockey', 'TimHortons')">Tim Hortons 2024-25</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Hockey', 'UpperDeck')">Upper Deck 2024</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Hockey', 'OPeeChee')">O-Pee-Chee</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Hockey', 'Other')">Other Sets</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Hockey', 'TimHortons')">Tim Hortons 2024-25</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Hockey', 'UpperDeck')">Upper Deck 2024</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Hockey', 'OPeeChee')">O-Pee-Chee</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Hockey', 'Other')">Other Sets</button>
                         </div>
 
                         <div id="Hockey-TimHortons" class="sub-tabcontent">
@@ -326,9 +326,9 @@
                         <h5>Baseball Cards</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Baseball', 'Topps')">Topps 2024</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Baseball', 'Heritage')">Heritage</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Baseball', 'Other')">Other Sets</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Baseball', 'Topps')">Topps 2024</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Baseball', 'Heritage')">Heritage</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Baseball', 'Other')">Other Sets</button>
                         </div>
 
                         <div id="Baseball-Topps" class="sub-tabcontent">
@@ -357,9 +357,9 @@
                         <h5>Basketball Cards</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Basketball', 'Panini')">Panini</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Basketball', 'Singles')">Singles</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Basketball', 'Other')">Other Sets</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Basketball', 'Panini')">Panini</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Basketball', 'Singles')">Singles</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Basketball', 'Other')">Other Sets</button>
                         </div>
 
                         <div id="Basketball-Panini" class="sub-tabcontent">
@@ -388,9 +388,9 @@
                         <h5>Football Cards</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Football', 'Panini')">Panini</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Football', 'Singles')">Singles</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Football', 'Other')">Other Sets</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Football', 'Panini')">Panini</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Football', 'Singles')">Singles</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Football', 'Other')">Other Sets</button>
                         </div>
 
                         <div id="Football-Panini" class="sub-tabcontent">
@@ -415,91 +415,19 @@
                     <p>Discover our collection of board games for all ages and player counts.</p>
                     
                     <div class="sub-tab">
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'BoardGames', 'Strategy')">Strategy Games</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'BoardGames', 'Family')">Family Games</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'BoardGames', 'Party')">Party Games</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'BoardGames', 'Card')">Card Games</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'BoardGames', 'Classics')">Classic Games</button>
-                    </div>
-
-                    <div id="BoardGames-Strategy" class="sub-tabcontent">
-                        <h5>Strategy Games</h5>
-                        
-                        <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Strategy', 'Euro')">Euro Games</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Strategy', 'War')">War Games</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Strategy', 'Economic')">Economic</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Strategy', 'Adventure')">Adventure</button>
-                        </div>
-
-                        <div id="Strategy-Euro" class="sub-tabcontent">
-                            <h6>Euro Games</h6>
-                            <div class="euro-container">
-                                <!-- Euro games products here -->
-                            </div>
-                        </div>
-
-                        <div id="Strategy-War" class="sub-tabcontent">
-                            <h6>War Games</h6>
-                            <div class="war-container">
-                                <!-- War games products here -->
-                            </div>
-                        </div>
-
-                        <div id="Strategy-Economic" class="sub-tabcontent">
-                            <h6>Economic Games</h6>
-                            <div class="economic-container">
-                                <!-- Economic games products here -->
-                            </div>
-                        </div>
-
-                        <div id="Strategy-Adventure" class="sub-tabcontent">
-                            <h6>Adventure Games</h6>
-                            <div class="adventure-container">
-                                <!-- Adventure games products here -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="BoardGames-Family" class="sub-tabcontent">
-                        <h5>Family Games</h5>
-                        
-                        <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Family', 'Kids')">Kids Games</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Family', 'Cooperative')">Cooperative</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Family', 'Educational')">Educational</button>
-                        </div>
-
-                        <div id="Family-Kids" class="sub-tabcontent">
-                            <h6>Kids Games</h6>
-                            <div class="kids-container">
-                                <!-- Kids games products here -->
-                            </div>
-                        </div>
-
-                        <div id="Family-Cooperative" class="sub-tabcontent">
-                            <h6>Cooperative Games</h6>
-                            <div class="cooperative-container">
-                                <!-- Cooperative games products here -->
-                            </div>
-                        </div>
-
-                        <div id="Family-Educational" class="sub-tabcontent">
-                            <h6>Educational Games</h6>
-                            <div class="educational-container">
-                                <!-- Educational games products here -->
-                            </div>
-                        </div>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'BoardGames', 'Party')">Party Games</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'BoardGames', 'Card')">Card Games</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'BoardGames', 'Classics')">Classic Games</button>
                     </div>
 
                     <div id="BoardGames-Party" class="sub-tabcontent">
                         <h5>Party Games</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Party', 'Social')">Social Deduction</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Party', 'Trivia')">Trivia</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Party', 'Word')">Word Games</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Party', 'Adult')">Adult Games</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Party', 'Social')">Social Deduction</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Party', 'Trivia')">Trivia</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Party', 'Word')">Word Games</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Party', 'Adult')">Adult Games</button>
                         </div>
 
                         <div id="Party-Social" class="sub-tabcontent">
@@ -535,9 +463,9 @@
                         <h5>Card Games</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Card', 'Traditional')">Traditional</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Card', 'Modern')">Modern Card Games</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Card', 'Deck')">Deck Building</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Card', 'Traditional')">Traditional</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Card', 'Modern')">Modern Card Games</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Card', 'Deck')">Deck Building</button>
                         </div>
 
                         <div id="Card-Traditional" class="sub-tabcontent">
@@ -566,9 +494,9 @@
                         <h5>Classic Games</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Classics', 'Chess')">Chess</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Classics', 'Traditional')">Traditional</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Classics', 'Vintage')">Vintage</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Classics', 'Chess')">Chess</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Classics', 'Traditional')">Traditional</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Classics', 'Vintage')">Vintage</button>
                         </div>
 
                         <div id="Classics-Chess" class="sub-tabcontent">
@@ -599,19 +527,19 @@
                     <p>Browse through our selection of card sleeves, board game accessories, and more.</p>
                     
                     <div class="sub-tab">
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'CardProtection')">Card Protection</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'CardStorage')">Storage</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'CardDisplay')">Display</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'Gaming')">Gaming Accessories</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'CardProtection')">Card Protection</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'CardStorage')">Storage</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'CardDisplay')">Display</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'Gaming')">Gaming Accessories</button>
                     </div>
 
                     <div id="Accessories-CardProtection" class="sub-tabcontent">
                         <h5>Card Protection</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardProtection', 'Sleeves')">Sleeves</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardProtection', 'Toploaders')">Toploaders</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardProtection', 'Other')">Other Protection</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'CardProtection', 'Sleeves')">Sleeves</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'CardProtection', 'Toploaders')">Toploaders</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'CardProtection', 'Other')">Other Protection</button>
                         </div>
 
                         <div id="CardProtection-Sleeves" class="sub-tabcontent">
@@ -741,9 +669,9 @@
                         <h5>Storage Solutions</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardStorage', 'Boxes')">Storage Boxes</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardStorage', 'Binders')">Binders</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardStorage', 'Cases')">Cases</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'CardStorage', 'Boxes')">Storage Boxes</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'CardStorage', 'Binders')">Binders</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'CardStorage', 'Cases')">Cases</button>
                         </div>
 
                         <div id="Storage-Boxes" class="sub-tabcontent">
@@ -772,9 +700,9 @@
                         <h5>Display Items</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardDisplay', 'Stands')">Card Stands</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardDisplay', 'Frames')">Frames</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'CardDisplay', 'Mats')">Play Mats</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'CardDisplay', 'Stands')">Card Stands</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'CardDisplay', 'Frames')">Frames</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'CardDisplay', 'Mats')">Play Mats</button>
                         </div>
 
                         <div id="Display-Stands" class="sub-tabcontent">
@@ -803,9 +731,9 @@
                         <h5>Gaming Accessories</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Gaming', 'Dice')">Dice & Counters</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Gaming', 'Tokens')">Tokens</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Gaming', 'Other')">Other Gaming</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Gaming', 'Dice')">Dice & Counters</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Gaming', 'Tokens')">Tokens</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Gaming', 'Other')">Other Gaming</button>
                         </div>
 
                         <div id="Gaming-Dice" class="sub-tabcontent">
@@ -836,19 +764,19 @@
                     <p>Explore our collection of Dungeons & Dragons books and accessories.</p>
                     
                     <div class="sub-tab">
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'D&D', 'Core')">Core Books</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'D&D', 'Adventures')">Adventures</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'D&D', 'Supplements')">Supplements</button>
-                        <button class="sub-tablinks" onclick="openSubSection(event, 'D&D', 'Accessories')">Accessories</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'D&D', 'Core')">Core Books</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'D&D', 'Adventures')">Adventures</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'D&D', 'Supplements')">Supplements</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'D&D', 'Accessories')">Accessories</button>
                     </div>
 
                     <div id="D&D-Core" class="sub-tabcontent">
                         <h5>Core Books</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Core', 'Rulebooks')">Rulebooks</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Core', 'Settings')">Setting Books</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Core', 'Bundles')">Bundles</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Core', 'Rulebooks')">Rulebooks</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Core', 'Settings')">Setting Books</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Core', 'Bundles')">Bundles</button>
                         </div>
 
                         <div id="Core-Rulebooks" class="sub-tabcontent">
@@ -877,9 +805,9 @@
                         <h5>Adventures</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Adventures', 'Campaign')">Full Campaigns</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Adventures', 'Oneshot')">One-Shots</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Adventures', 'Digital')">Digital</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Adventures', 'Campaign')">Full Campaigns</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Adventures', 'Oneshot')">One-Shots</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Adventures', 'Digital')">Digital</button>
                         </div>
 
                         <div id="Adventures-Campaign" class="sub-tabcontent">
@@ -908,9 +836,9 @@
                         <h5>Supplements</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Supplements', 'Character')">Character Options</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Supplements', 'Monster')">Monster Books</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Supplements', 'DM')">DM Resources</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Supplements', 'Character')">Character Options</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Supplements', 'Monster')">Monster Books</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Supplements', 'DM')">DM Resources</button>
                         </div>
 
                         <div id="Supplements-Character" class="sub-tabcontent">
@@ -939,10 +867,10 @@
                         <h5>D&D Accessories</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'Dice')">Dice Sets</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'Minis')">Miniatures</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'Maps')">Maps & Tiles</button>
-                            <button class="sub-tablinks" onclick="openSubSection(event, 'Accessories', 'Other')">Other</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'Dice')">Dice Sets</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'Minis')">Miniatures</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'Maps')">Maps & Tiles</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'Other')">Other</button>
                         </div>
 
                         <div id="Accessories-Dice" class="sub-tabcontent">
@@ -995,7 +923,7 @@
     <script src="scripts/darkmode.js"></script>
     <script src="scripts/tabs.js"></script>
     <script>
-        function openSection(evt, sectionName) {
+        function openTabSection(evt, sectionName) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
@@ -1035,7 +963,7 @@
                     console.log(`Main Section: ${mainSection}, Sub Section: ${subSection}, Sub Sub Section: ${subSubSection}`);
 
                     // Open the main section
-                    openSection(event, mainSection);
+                    openTabSection(event, mainSection);
 
                     // Open the sub-section if it exists
                     if (subSection) {
@@ -1063,7 +991,7 @@
         };
     </script>
     <script>
-        function openSubSection(evt, parentSection, subSectionName) {
+        function openTabSubSection(evt, parentSection, subSectionName) {
             // Hide all sub-tab contents
             var subTabContents = document.querySelectorAll(`#${parentSection} .sub-tabcontent`);
             subTabContents.forEach(content => content.style.display = "none");

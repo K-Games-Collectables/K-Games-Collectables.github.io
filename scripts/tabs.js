@@ -1,4 +1,4 @@
-function openSection(evt, sectionName) {
+function openTabSection(evt, sectionName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -18,38 +18,35 @@ function openSection(evt, sectionName) {
     }
 }
 
-function openSubSection(evt, parentSection, subSectionName) {
-    // Get the parent section and target content
-    var section = document.getElementById(parentSection);
-    var targetContent = document.getElementById(parentSection + "-" + subSectionName);
-    
-    // Find the immediate parent container (could be main tab or sub-tab)
-    var immediateParent = evt.currentTarget.closest('.tabcontent, .sub-tabcontent');
-    
-    // Get only the direct sub-tabcontent elements within the immediate parent
-    var subtabcontent = immediateParent.querySelectorAll(':scope > .sub-tabcontent');
-    var subtablinks = evt.currentTarget.parentElement.getElementsByClassName("sub-tablinks");
-    
-    // Hide all sibling sub-tabcontent
-    subtabcontent.forEach(function(content) {
+function openTabSubSection(evt, parentSection, subSectionName) {
+    console.log(`Opening sub-section: ${subSectionName}`);
+
+    // Hide all sub-tab contents
+    var subTabContents = document.querySelectorAll(`#${parentSection} .sub-tabcontent`);
+    subTabContents.forEach(content => {
+        console.log(`Hiding content: ${content.id}`);
         content.style.display = "none";
     });
-    
-    // Remove active class from sibling sub-tablinks
-    Array.from(subtablinks).forEach(function(link) {
-        link.className = link.className.replace(" active", "");
-    });
-    
-    // Show current sub-tab and set active class
-    if (targetContent) {
-        targetContent.style.display = "block";
-        evt.currentTarget.className += " active";
 
-        // Open first nested sub-tab by default if it exists
-        var firstNestedSubTab = targetContent.querySelector(':scope > .sub-tab > .sub-tablinks');
-        if (firstNestedSubTab) {
-            firstNestedSubTab.click();
-        }
+    // Show the selected sub-tab content
+    var selectedSubTabContent = document.getElementById(`${parentSection}-${subSectionName}`);
+    if (selectedSubTabContent) {
+        console.log(`Showing sub-tab content: ${selectedSubTabContent.id}`);
+        selectedSubTabContent.style.display = "block";
+    }
+
+    // Hide all sub-sub-tab contents within the selected sub-tab
+    var subSubTabContents = document.querySelectorAll(`#${parentSection}-${subSectionName} .sub-tabcontent`);
+    subSubTabContents.forEach(content => {
+        console.log(`Hiding sub-sub-tab content: ${content.id}`);
+        content.style.display = "none"; // Hide all sub-sub-tabs
+    });
+
+    // Show the selected sub-sub-tab content
+    var selectedSubSubTabContent = document.getElementById(`${subSectionName}-${subSubSectionName}`);
+    if (selectedSubSubTabContent) {
+        console.log(`Showing sub-sub-tab content: ${selectedSubSubTabContent.id}`);
+        selectedSubSubTabContent.style.display = "block"; // Show the selected one
     }
 
     // Update Masonry layout for the active section
@@ -66,6 +63,16 @@ function openSubSection(evt, parentSection, subSectionName) {
             });
             msnry.layout();
         });
+    }
+
+    // Handle hash for hyperlinking
+    const hash = window.location.hash;
+    if (hash) {
+        const subSubSectionName = hash.substring(1); // Remove the '#' character
+        const subSubTabToOpen = document.getElementById(`${subSectionName}-${subSubSectionName}`);
+        if (subSubTabToOpen) {
+            subSubTabToOpen.style.display = "block"; // Show the sub-sub-tab if it matches the hash
+        }
     }
 }
 
