@@ -162,6 +162,26 @@
         Swal.getContainer().classList.add('swal2-dark');
     }
     </script>
+    <script>
+        document.getElementById('promo-banner').addEventListener('click', function() {
+            Swal.fire({
+                title: 'Shop Now!',
+                text: 'Click below to visit our store.',
+                icon: 'info',
+                confirmButtonText: 'Go to Store',
+                showCancelButton: true,
+                cancelButtonText: 'Close',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = 'store.html'; // Link to the store page
+                }
+            });
+        });
+
+        document.getElementById('banner-close').addEventListener('click', function() {
+            document.getElementById('promo-banner').style.display = 'none'; // Close the banner
+        });
+    </script>
 </body>
 
 </html>
