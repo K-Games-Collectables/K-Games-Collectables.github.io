@@ -662,6 +662,15 @@ body.dark-mode .sub-tabcontent h6 {
     text-align: center;
 }
 
+#promo-banner {
+    background-color: #6F42C1; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    z-index: 1000;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
     .nav-class {
