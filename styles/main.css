@@ -658,6 +658,10 @@ body.dark-mode .sub-tabcontent h6 {
     font-size: 0.9em;
 }
 
+#split {
+    text-align: center;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
     .nav-class {

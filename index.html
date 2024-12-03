@@ -16,6 +16,7 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 
 <body class="body-class">
@@ -53,8 +54,6 @@
         <main class="main-class">
             <div class="intro-div">
                 <h2>Welcome to K-Games&Collectables</h2>
-
-                <h3><p color="red"></p><a href="blog.html#2024-12-01">[Important! Update - Dec. 1st, 2024]</a></h3>
                 
                 <p>K-Games&Collectables is a hobby/collectibles website that I'm building to share my love of games and collectibles with others.</p>
                 <p>I'm very much addicted to Pokemon TCG, MTG, and board games. I made this small business to share my love of these hobbies with others.</p>
@@ -167,6 +166,26 @@
     <script src="scripts/copyright.js"></script>
     <script src="scripts/hamburger.js"></script>
     <script src="scripts/darkmode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire({
+                title: 'Important Shipping Update!',
+                text: 'Due to recent Canada Post shipping issues, please check our blog for more information.',
+                icon: 'warning',
+                confirmButtonText: 'Read More',
+                showCancelButton: true,
+                cancelButtonText: 'Close',
+                onClose: () => {
+                    Swal.stopTimer();
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = 'blog.html#2024-12-01'; // Link to the specific blog post
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
