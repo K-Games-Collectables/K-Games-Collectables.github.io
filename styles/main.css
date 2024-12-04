@@ -440,6 +440,8 @@ body.dark-mode .tabcontent {
 }
 
 .product-info {
+    /* width: calc(33.33% - 10px); */
+    margin: 0 5px 5px;
     background-color: var(--background-color-dark) !important;
     color: var(--text-color-dark) !important;
     padding: 5px;
@@ -450,18 +452,17 @@ body.dark-mode .product-info {
     background-color: var(--background-color-light) !important;
 }
 
-.accessories-container,
+/* .accessories-container,
 .pokemon-container,
 .magic-container,
 .sports-container,
 .boardgames-container,
 .dnd-container {
-    padding: 10px;  /* Add padding around the container */
-}
-
-.product-info {
-    margin-bottom: 20px !important;  /* Force spacing between rows */
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    padding: 0 2px;
+} */
 
 .thank-you-section {
     text-align: center;
