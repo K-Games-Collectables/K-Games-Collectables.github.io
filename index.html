@@ -176,8 +176,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             Swal.fire({
                 title: 'Important Shipping Update!',
-                text: 'Due to the ongoing Canada Post Strike, shipping prices have been increased. Please check our blog for more information.',
-                icon: 'warning',
+                text: 'Canada Post services are resuming. Please check our blog for more information.',
+                icon: 'info',
                 confirmButtonText: 'Read More',
                 showCancelButton: true,
                 cancelButtonText: 'Close',
@@ -186,7 +186,7 @@
                 }
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = 'blog.html#2024-12-01'; // Link to the specific blog post
+                    window.location.href = 'blog.html#2024-12-17'; // Link to the specific blog post
                 }
             });
         });
