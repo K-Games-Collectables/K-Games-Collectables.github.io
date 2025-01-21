@@ -19,40 +19,54 @@ function openTabSection(evt, sectionName) {
 }
 
 function openTabSubSection(evt, parentSection, subSectionName) {
-    console.log(`Opening sub-section: ${subSectionName}`);
+    // console.log('=== Tab Debug Info ===');
+    // console.log(`Event:`, evt);
+    // console.log(`Parent Section: ${parentSection}`);
+    // console.log(`Sub Section Name: ${subSectionName}`);
 
-    // Hide all sub-tab contents
+    // // Log all sub-tabcontent elements found
+    // var allSubTabContents = document.querySelectorAll('.sub-tabcontent');
+    // console.log(`Total sub-tabcontent elements found: ${allSubTabContents.length}`);
+    // allSubTabContents.forEach(content => {
+    //     console.log(`Found sub-tabcontent with ID: ${content.id}`);
+    // });
+
+    // Hide all sub-tab contents within the parent section
     var subTabContents = document.querySelectorAll(`#${parentSection} .sub-tabcontent`);
+    // console.log(`Found ${subTabContents.length} sub-tabcontents in parent section ${parentSection}`);
     subTabContents.forEach(content => {
-        console.log(`Hiding content: ${content.id}`);
         content.style.display = "none";
+        // console.log(`Hidden sub-tabcontent: ${content.id}`);
     });
 
     // Show the selected sub-tab content
     var selectedSubTabContent = document.getElementById(`${parentSection}-${subSectionName}`);
     if (selectedSubTabContent) {
-        console.log(`Showing sub-tab content: ${selectedSubTabContent.id}`);
         selectedSubTabContent.style.display = "block";
+        // console.log(`Successfully showed sub-tab content: ${selectedSubTabContent.id}`);
+    } else {
+        // console.error(`Failed to find sub-tab content with ID: ${parentSection}-${subSectionName}`);
+        // // Log all IDs in the document for debugging
+        // const allElements = document.querySelectorAll('[id]');
+        // console.log('All element IDs in document:');
+        // allElements.forEach(el => console.log(el.id));
     }
 
-    // Hide all sub-sub-tab contents within the selected sub-tab
-    var subSubTabContents = document.querySelectorAll(`#${parentSection}-${subSectionName} .sub-tabcontent`);
-    subSubTabContents.forEach(content => {
-        console.log(`Hiding sub-sub-tab content: ${content.id}`);
-        content.style.display = "none"; // Hide all sub-sub-tabs
+    // Set the clicked button as active
+    var subTabLinks = document.querySelectorAll(`#${parentSection} .sub-tablinks`);
+    // console.log(`Found ${subTabLinks.length} sub-tablinks in parent section ${parentSection}`);
+    subTabLinks.forEach(link => {
+        link.classList.remove('active');
+        // console.log(`Removed active class from button: ${link.textContent}`);
     });
-
-    // Show the selected sub-sub-tab content
-    var selectedSubSubTabContent = document.getElementById(`${subSectionName}-${subSubSectionName}`);
-    if (selectedSubSubTabContent) {
-        console.log(`Showing sub-sub-tab content: ${selectedSubSubTabContent.id}`);
-        selectedSubSubTabContent.style.display = "block"; // Show the selected one
-    }
+    evt.currentTarget.classList.add('active');
+    // console.log(`Added active class to clicked button: ${evt.currentTarget.textContent}`);
 
     // Update Masonry layout for the active section
     var containerClass = subSectionName.toLowerCase() + '-container';
     var elem = document.querySelector(`#${parentSection}-${subSectionName} .${containerClass}`);
     if (elem) {
+        // console.log(`Found Masonry container: ${containerClass}`);
         imagesLoaded(elem, function() {
             var msnry = new Masonry(elem, {
                 itemSelector: '.product-info',
@@ -62,18 +76,15 @@ function openTabSubSection(evt, parentSection, subSectionName) {
                 horizontalOrder: true
             });
             msnry.layout();
+            // console.log('Masonry layout updated');
         });
+    } else {
+        // console.log(`No Masonry container found for: ${containerClass}`);
     }
 
-    // Handle hash for hyperlinking
-    const hash = window.location.hash;
-    if (hash) {
-        const subSubSectionName = hash.substring(1); // Remove the '#' character
-        const subSubTabToOpen = document.getElementById(`${subSectionName}-${subSubSectionName}`);
-        if (subSubTabToOpen) {
-            subSubTabToOpen.style.display = "block"; // Show the sub-sub-tab if it matches the hash
-        }
-    }
+    // console.log('=== End Debug Info ===');
+
+    // console.log(`Attempting to open: ${parentSection}-${subSectionName}`);
 }
 
 // Set default open tab

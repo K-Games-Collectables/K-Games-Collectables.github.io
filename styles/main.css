@@ -694,3 +694,11 @@ body.dark-mode .sub-tabcontent h6 {
         justify-content: center;
     }
 }
+
+/* .sub-tabcontent {
+    display: none;
+}
+
+.sub-tabcontent.active {
+    display: block !important;
+} */

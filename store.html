@@ -66,7 +66,7 @@
                     <button class="tablinks" onclick="openTabSection(event, 'Pokemon')">Pokemon</button>
                     <button class="tablinks" onclick="openTabSection(event, 'Sports')">Sports</button>
                     <button class="tablinks" onclick="openTabSection(event, 'BoardGames')">Board Games</button>
-                    <button class="tablinks" onclick="openTabSection(event, 'D&D')">D&D</button>
+                    <button class="tablinks" onclick="openTabSection(event, 'D-and-D')">D&D</button>
                     <button class="tablinks" onclick="openTabSection(event, 'Accessories')">Accessories</button>
                 </div>
 
@@ -133,6 +133,7 @@
                             <button class="sub-tablinks" onclick="openTabSubSection(event, 'Singles', 'Modern')">Modern</button>
                             <button class="sub-tablinks" onclick="openTabSubSection(event, 'Singles', 'Vintage')">Vintage</button>
                             <button class="sub-tablinks" onclick="openTabSubSection(event, 'Singles', 'Japanese')">Japanese</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Singles', 'Graded')">Graded Cards</button>
                         </div>
 
                         <div id="Singles-Modern" class="sub-tabcontent">
@@ -155,6 +156,13 @@
                                 <!-- Japanese singles here -->
                             </div>
                         </div>
+
+                        <div id="Singles-Graded" class="sub-tabcontent">
+                            <h6>Graded Cards</h6>
+                            <div class="graded-container">
+                                <!-- Graded cards here -->
+                            </div>
+                        </div>
                     </div>
 
                     <div id="Pokemon-Sealed" class="sub-tabcontent">
@@ -170,7 +178,165 @@
                         <div id="Sealed-Boosters" class="sub-tabcontent">
                             <h6>Booster Packs</h6>
                             <div class="boosters-container">
-                                <!-- Booster products here -->
+                                <!-- Scarlet & Violet Booster Pack -->
+                                <div class="product-info" style="
+                                  overflow: auto;
+                                  display: flex;
+                                  flex-direction: column;
+                                  justify-content: flex-end;
+                                  align-items: center;
+                                  width: 259px;
+                                  background: #FFFFFF;
+                                  border: 1px solid rgba(0, 0, 0, 0.1);
+                                  box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                                  border-radius: 10px;
+                                  font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;
+                                  ">
+                                    <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/5e3114e070de30cf02b8aa28c0fe3030a8125122/original.png" alt="Scarlet &amp; Violet Booster Pack" onerror="this.style.display='none'" style="width: 100%;">
+                                  <div style="padding: 20px;">
+                                      <p style="
+                                    font-size: 18px;
+                                    line-height: 20px;
+                                  ">Scarlet &amp; Violet Booster Pack</p>
+                                      <p style="
+                                    font-size: 18px;
+                                    line-height: 20px;
+                                    font-weight: 600;
+                                  ">$7.25</p>
+                                    <a target="_blank" href="https://square.link/u/H8s1AgED?src=embed" style="
+                                    display: inline-block;
+                                    font-size: 18px;
+                                    line-height: 48px;
+                                    height: 48px;
+                                    color: #ffffff;
+                                    min-width: 212px;
+                                    background-color: #E6013D;
+                                    text-align: center;
+                                    box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                                    border-radius: 50px;
+                                  ">Buy now</a>
+                                  </div>
+                                </div>
+
+                                <!-- Obsidian Flames Booster Pack -->
+                                <div class="product-info" style="
+                                  overflow: auto;
+                                  display: flex;
+                                  flex-direction: column;
+                                  justify-content: flex-end;
+                                  align-items: center;
+                                  width: 259px;
+                                  background: #FFFFFF;
+                                  border: 1px solid rgba(0, 0, 0, 0.1);
+                                  box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                                  border-radius: 10px;
+                                  font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;
+                                  ">
+                                    <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/42484b97e5f8f30a98d6e070a523ab077630466e/original.jpeg" alt="Obsidian Flames Booster Pack" onerror="this.style.display='none'" style="width: 100%;">
+                                  <div style="padding: 20px;">
+                                      <p style="
+                                    font-size: 18px;
+                                    line-height: 20px;
+                                  ">Obsidian Flames Booster Pack</p>
+                                      <p style="
+                                    font-size: 18px;
+                                    line-height: 20px;
+                                    font-weight: 600;
+                                  ">$7.50</p>
+                                    <a target="_blank" href="https://square.link/u/UbHL8D77?src=embed" style="
+                                    display: inline-block;
+                                    font-size: 18px;
+                                    line-height: 48px;
+                                    height: 48px;
+                                    color: #ffffff;
+                                    min-width: 212px;
+                                    background-color: #E6013D;
+                                    text-align: center;
+                                    box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                                    border-radius: 50px;
+                                  ">Buy now</a>
+                                  </div>
+                                </div>
+
+                                <!-- Temporal Forces Booster Pack -->
+                                <div class="product-info" style="
+                                  overflow: auto;
+                                  display: flex;
+                                  flex-direction: column;
+                                  justify-content: flex-end;
+                                  align-items: center;
+                                  width: 259px;
+                                  background: #FFFFFF;
+                                  border: 1px solid rgba(0, 0, 0, 0.1);
+                                  box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                                  border-radius: 10px;
+                                  font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;
+                                  ">
+                                    <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/fda3dea3ce451c509714d664f3e3f62436dcf085/original.png" alt="Temporal Forces Booster Pack" onerror="this.style.display='none'" style="width: 100%;">
+                                  <div style="padding: 20px;">
+                                      <p style="
+                                    font-size: 18px;
+                                    line-height: 20px;
+                                  ">Temporal Forces Booster Pack</p>
+                                      <p style="
+                                    font-size: 18px;
+                                    line-height: 20px;
+                                    font-weight: 600;
+                                  ">$7.25</p>
+                                    <a target="_blank" href="https://square.link/u/FOQYVk1p?src=embed" style="
+                                    display: inline-block;
+                                    font-size: 18px;
+                                    line-height: 48px;
+                                    height: 48px;
+                                    color: #ffffff;
+                                    min-width: 212px;
+                                    background-color: #E6013D;
+                                    text-align: center;
+                                    box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                                    border-radius: 50px;
+                                  ">Buy now</a>
+                                  </div>
+                                </div>
+
+                                <!-- Surging Sparks Booster Pack -->
+                                <div class="product-info" style="
+                                  overflow: auto;
+                                  display: flex;
+                                  flex-direction: column;
+                                  justify-content: flex-end;
+                                  align-items: center;
+                                  width: 259px;
+                                  background: #FFFFFF;
+                                  border: 1px solid rgba(0, 0, 0, 0.1);
+                                  box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                                  border-radius: 10px;
+                                  font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;
+                                  ">
+                                    <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/38706b14df38bc7d693147790a177ac4431b4489/original.jpeg" alt="Surging Sparks Booster Pack" onerror="this.style.display='none'" style="width: 100%;">
+                                  <div style="padding: 20px;">
+                                      <p style="
+                                    font-size: 18px;
+                                    line-height: 20px;
+                                  ">Surging Sparks Booster Pack</p>
+                                      <p style="
+                                    font-size: 18px;
+                                    line-height: 20px;
+                                    font-weight: 600;
+                                  ">$11.50</p>
+                                    <a target="_blank" href="https://square.link/u/Xj5aAFFU?src=embed" style="
+                                    display: inline-block;
+                                    font-size: 18px;
+                                    line-height: 48px;
+                                    height: 48px;
+                                    color: #ffffff;
+                                    min-width: 212px;
+                                    background-color: #E6013D;
+                                    text-align: center;
+                                    box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                                    border-radius: 50px;
+                                  ">Buy now</a>
+                                  </div>
+                                </div>
                             </div>
                         </div>
 
@@ -182,48 +348,53 @@
                         </div>
 
                         <div id="Sealed-Collections" class="sub-tabcontent">
-                            <h6>Collection Boxes</h6>
+                            <h6>Collections</h6>
                             <div class="collections-container">
-                                <!-- Collection box products here -->
+                                <!-- Collection products here -->
                             </div>
                         </div>
 
                         <div id="Sealed-Mystery" class="sub-tabcontent">
                             <h6>Mystery Products</h6>
                             <div class="mystery-container">
-                                <!-- Moving your existing mystery bag product here -->
+                                <!-- Pokemon Mystery Bag -->
                                 <div class="product-info" style="
-                                    overflow: auto;
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: flex-end;
-                                    align-items: center;
-                                    width: 259px;
-                                    background: #FFFFFF;
-                                    border: 1px solid rgba(0, 0, 0, 0.1);
-                                    box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
-                                    border-radius: 10px;
-                                    font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;">
-                                    <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/fcae4202621d01b3ea14308a0b12c6415204ea28/original.jpeg" 
-                                         alt="Pokemon Mystery Bag" 
-                                         onerror="this.style.display='none'" 
-                                         style="width: 100%;">
-                                    <div style="padding: 20px;">
-                                        <p style="font-size: 18px; line-height: 20px;">Pokemon Mystery Bag</p>
-                                        <p style="font-size: 18px; line-height: 20px; font-weight: 600;">$15.69</p>
-                                        <a target="_blank" 
-                                           href="https://square.link/u/hoQAYc1n?src=embed" 
-                                           style="display: inline-block;
-                                                  font-size: 18px;
-                                                  line-height: 48px;
-                                                  height: 48px;
-                                                  color: #ffffff;
-                                                  min-width: 212px;
-                                                  background-color: #E6013D;
-                                                  text-align: center;
-                                                  box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
-                                                  border-radius: 50px;">Buy now</a>
-                                    </div>
+                                  overflow: auto;
+                                  display: flex;
+                                  flex-direction: column;
+                                  justify-content: flex-end;
+                                  align-items: center;
+                                  width: 259px;
+                                  background: #FFFFFF;
+                                  border: 1px solid rgba(0, 0, 0, 0.1);
+                                  box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                                  border-radius: 10px;
+                                  font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;
+                                  ">
+                                    <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/fcae4202621d01b3ea14308a0b12c6415204ea28/original.jpeg" alt="Pokemon Mystery Bag" onerror="this.style.display='none'" style="width: 100%;">
+                                  <div style="padding: 20px;">
+                                      <p style="
+                                    font-size: 18px;
+                                    line-height: 20px;
+                                  ">Pokemon Mystery Bag</p>
+                                      <p style="
+                                    font-size: 18px;
+                                    line-height: 20px;
+                                    font-weight: 600;
+                                  ">$15.69</p>
+                                    <a target="_blank" href="https://square.link/u/hoQAYc1n?src=embed" style="
+                                    display: inline-block;
+                                    font-size: 18px;
+                                    line-height: 48px;
+                                    height: 48px;
+                                    color: #ffffff;
+                                    min-width: 212px;
+                                    background-color: #E6013D;
+                                    text-align: center;
+                                    box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                                    border-radius: 50px;
+                                  ">Buy now</a>
+                                  </div>
                                 </div>
                             </div>
                         </div>
@@ -263,8 +434,69 @@
 
                         <div id="Accessories-Storage" class="sub-tabcontent">
                             <h6>Storage Solutions</h6>
-                            <div class="storage-container">
-                                <!-- Storage products here -->
+                            <div class="sub-tab">
+                                <button class="sub-tablinks" onclick="openTabSubSection(event, 'Storage', 'Binders')">Binders & Pages</button>
+                                <button class="sub-tablinks" onclick="openTabSubSection(event, 'Storage', 'Boxes')">Storage Boxes</button>
+                            </div>
+
+                            <div id="Storage-Binders" class="sub-tabcontent">
+                                <h6>Binders & Pages</h6>
+                                <div class="binders-container">
+                                    <!-- Binders products here -->
+                                    <!-- Ultra PRO Premium Pro-Binder -->
+                                    <div class="product-info" style="
+                                        overflow: auto;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: flex-end;
+                                        align-items: center;
+                                        width: 259px;
+                                        background: #FFFFFF;
+                                        border: 1px solid rgba(0, 0, 0, 0.1);
+                                        box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                                        border-radius: 10px;
+                                        font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;">
+                                        <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/e006b99b33ada0bcc690609f572fb7d3d2fb12e1/original.jpeg" 
+                                             alt="Ultra PRO Premium Pro-Binder" 
+                                             onerror="this.style.display='none'" 
+                                             style="width: 100%;">
+                                        <div style="padding: 20px;">
+                                            <p style="
+                                                font-size: 18px;
+                                                line-height: 20px;">
+                                                Ultra PRO Premium Pro-Binder
+                                            </p>
+                                            <p style="
+                                                font-size: 18px;
+                                                line-height: 20px;
+                                                font-weight: 600;">
+                                                $64.98
+                                            </p>
+                                            <a target="_blank" 
+                                               href="https://square.link/u/SrhJqxeU?src=embed" 
+                                               style="
+                                                display: inline-block;
+                                                font-size: 18px;
+                                                line-height: 48px;
+                                                height: 48px;
+                                                color: #ffffff;
+                                                min-width: 212px;
+                                                background-color: #E6013D;
+                                                text-align: center;
+                                                box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                                                border-radius: 50px;">
+                                                Buy now
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="Storage-Boxes" class="sub-tabcontent">
+                                <h6>Storage Boxes</h6>
+                                <div class="boxes-container">
+                                    <!-- Storage boxes products here -->
+                                </div>
                             </div>
                         </div>
 
@@ -277,8 +509,23 @@
 
                         <div id="Accessories-Display" class="sub-tabcontent">
                             <h6>Display Items</h6>
-                            <div class="display-container">
-                                <!-- Display products here -->
+                            <div class="sub-tab">
+                                <button class="sub-tablinks" onclick="openTabSubSection(event, 'Display', 'Frames')">Frames</button>
+                                <button class="sub-tablinks" onclick="openTabSubSection(event, 'Display', 'Stands')">Stands</button>
+                            </div>
+
+                            <div id="Display-Frames" class="sub-tabcontent">
+                                <h6>Frames</h6>
+                                <div class="frames-container">
+                                    <!-- Frames products here -->
+                                </div>
+                            </div>
+
+                            <div id="Display-Stands" class="sub-tabcontent">
+                                <h6>Stands</h6>
+                                <div class="stands-container">
+                                    <!-- Stands products here -->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -921,8 +1168,8 @@
                     
                     <div class="sub-tab">
                         <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'CardProtection')">Card Protection</button>
-                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'CardStorage')">Storage</button>
-                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'CardDisplay')">Display</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'Storage')">Storage</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'Display')">Display</button>
                         <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'Gaming')">Gaming Accessories</button>
                     </div>
 
@@ -1058,15 +1305,15 @@
                         </div>
                     </div>
 
-                    <div id="Accessories-CardStorage" class="sub-tabcontent">
+                    <div id="Accessories-Storage" class="sub-tabcontent">
                         <h5>Storage Solutions</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'CardStorage', 'Boxes')">Storage Boxes</button>
-                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'CardStorage', 'Binders')">Binders</button>
-                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'CardStorage', 'Cases')">Cases</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Storage', 'Boxes')">Storage Boxes</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Storage', 'Binders')">Binders</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Storage', 'Cases')">Cases</button>
                         </div>
-
+                        
                         <div id="Storage-Boxes" class="sub-tabcontent">
                             <h6>Storage Boxes</h6>
                             <div class="boxes-container">
@@ -1077,7 +1324,44 @@
                         <div id="Storage-Binders" class="sub-tabcontent">
                             <h6>Binders & Pages</h6>
                             <div class="binders-container">
-                                <!-- Binders products here -->
+                                <!-- Ultra PRO Premium Pro-Binder -->
+                                <div class="product-info" style="
+                                  overflow: auto;
+                                  display: flex;
+                                  flex-direction: column;
+                                  justify-content: flex-end;
+                                  align-items: center;
+                                  width: 259px;
+                                  background: #FFFFFF;
+                                  border: 1px solid rgba(0, 0, 0, 0.1);
+                                  box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                                  border-radius: 10px;
+                                  font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;
+                                  ">
+                                  <div style="padding: 20px;">
+                                      <p style="
+                                    font-size: 18px;
+                                    line-height: 20px;
+                                  ">Ultra PRO Premium Pro-Binder</p>
+                                      <p style="
+                                    font-size: 18px;
+                                    line-height: 20px;
+                                    font-weight: 600;
+                                  ">$64.98</p>
+                                    <a target="_blank" href="https://square.link/u/SrhJqxeU?src=embed" style="
+                                    display: inline-block;
+                                    font-size: 18px;
+                                    line-height: 48px;
+                                    height: 48px;
+                                    color: #ffffff;
+                                    min-width: 212px;
+                                    background-color: #E6013D;
+                                    text-align: center;
+                                    box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                                    border-radius: 50px;
+                                  ">Buy now</a>
+                                  </div>
+                                </div>
                             </div>
                         </div>
 
@@ -1089,13 +1373,13 @@
                         </div>
                     </div>
 
-                    <div id="Accessories-CardDisplay" class="sub-tabcontent">
+                    <div id="Display-Accessories" class="sub-tabcontent">
                         <h5>Display Items</h5>
                         
                         <div class="sub-tab">
-                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'CardDisplay', 'Stands')">Card Stands</button>
-                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'CardDisplay', 'Frames')">Frames</button>
-                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'CardDisplay', 'Mats')">Play Mats</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Display', 'Stands')">Card Stands</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Display', 'Frames')">Frames</button>
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'Display', 'Mats')">Play Mats</button>
                         </div>
 
                         <div id="Display-Stands" class="sub-tabcontent">
@@ -1133,6 +1417,45 @@
                             <h6>Dice & Counters</h6>
                             <div class="dice-container">
                                 <!-- Dice products here -->
+                                <!-- D&D Dice Set -- Immortal Blood -->
+                                <div class="product-info" style="
+                                  overflow: auto;
+                                  display: flex;
+                                  flex-direction: column;
+                                  justify-content: flex-end;
+                                  align-items: center;
+                                  width: 259px;
+                                  background: #FFFFFF;
+                                  border: 1px solid rgba(0, 0, 0, 0.1);
+                                  box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                                  border-radius: 10px;
+                                  font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;
+                                  ">
+                                    <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/9ed369320a597e4938d1f2d4a347a2f23634e328/original.jpeg" alt="D&amp;D Dice Set -- Immortal Blood" onerror="this.style.display='none'" style="width: 100%;">
+                                  <div style="padding: 20px;">
+                                      <p style="
+                                    font-size: 18px;
+                                    line-height: 20px;
+                                  ">D&amp;D Dice Set -- Immortal Blood</p>
+                                      <p style="
+                                    font-size: 18px;
+                                    line-height: 20px;
+                                    font-weight: 600;
+                                  ">$7.51</p>
+                                    <a target="_blank" href="https://square.link/u/TUyXD0FA?src=embed" style="
+                                    display: inline-block;
+                                    font-size: 18px;
+                                    line-height: 48px;
+                                    height: 48px;
+                                    color: #ffffff;
+                                    min-width: 212px;
+                                    background-color: #E6013D;
+                                    text-align: center;
+                                    box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                                    border-radius: 50px;
+                                  ">Buy now</a>
+                                  </div>
+                                </div>
                             </div>
                         </div>
 
@@ -1152,18 +1475,18 @@
                     </div>
                 </div>
 
-                <div id="D&D" class="tabcontent">
+                <div id="D-and-D" class="tabcontent">
                     <h4>Dungeons & Dragons</h4>
                     <p>Explore our collection of Dungeons & Dragons books and accessories.</p>
                     
                     <div class="sub-tab">
-                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'D&D', 'Core')">Core Books</button>
-                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'D&D', 'Adventures')">Adventures</button>
-                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'D&D', 'Supplements')">Supplements</button>
-                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'D&D', 'Accessories')">Accessories</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'D-and-D', 'Core')">Core Books</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'D-and-D', 'Adventures')">Adventures</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'D-and-D', 'Supplements')">Supplements</button>
+                        <button class="sub-tablinks" onclick="openTabSubSection(event, 'D-and-D', 'Accessories')">Accessories</button>
                     </div>
 
-                    <div id="D&D-Core" class="sub-tabcontent">
+                    <div id="D-and-D-Core" class="sub-tabcontent">
                         <h5>Core Books</h5>
                         
                         <div class="sub-tab">
@@ -1194,7 +1517,7 @@
                         </div>
                     </div>
 
-                    <div id="D&D-Adventures" class="sub-tabcontent">
+                    <div id="D-and-D-Adventures" class="sub-tabcontent">
                         <h5>Adventures</h5>
                         
                         <div class="sub-tab">
@@ -1225,7 +1548,7 @@
                         </div>
                     </div>
 
-                    <div id="D&D-Supplements" class="sub-tabcontent">
+                    <div id="D-and-D-Supplements" class="sub-tabcontent">
                         <h5>Supplements</h5>
                         
                         <div class="sub-tab">
@@ -1256,10 +1579,11 @@
                         </div>
                     </div>
 
-                    <div id="D&D-Accessories" class="sub-tabcontent">
+                    <div id="D-and-D-Accessories" class="sub-tabcontent">
                         <h5>D&D Accessories</h5>
                         
                         <div class="sub-tab">
+                            <button class="sub-tablinks" onclick="openTabSubSection(event, 'D-and-D', 'Accessories')">Accessories</button>
                             <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'Dice')">Dice Sets</button>
                             <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'Minis')">Miniatures</button>
                             <button class="sub-tablinks" onclick="openTabSubSection(event, 'Accessories', 'Maps')">Maps & Tiles</button>
@@ -1270,6 +1594,46 @@
                             <h6>Dice Sets</h6>
                             <div class="dnd-dice-container">
                                 <!-- Dice sets -->
+                                <!-- D&D Dice Set -- Immortal Blood -->
+                                 <!-- D&D Dice Set -- Immortal Blood -->
+                                <div class="product-info" style="
+                                overflow: auto;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-end;
+                                align-items: center;
+                                width: 259px;
+                                background: #FFFFFF;
+                                border: 1px solid rgba(0, 0, 0, 0.1);
+                                box-shadow: -2px 10px 5px rgba(0, 0, 0, 0);
+                                border-radius: 10px;
+                                font-family: SQ Market, SQ Market, Helvetica, Arial, sans-serif;
+                                ">
+                                  <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/9ed369320a597e4938d1f2d4a347a2f23634e328/original.jpeg" alt="D&amp;D Dice Set -- Immortal Blood" onerror="this.style.display='none'" style="width: 100%;">
+                                <div style="padding: 20px;">
+                                    <p style="
+                                  font-size: 18px;
+                                  line-height: 20px;
+                                ">D&amp;D Dice Set -- Immortal Blood</p>
+                                    <p style="
+                                  font-size: 18px;
+                                  line-height: 20px;
+                                  font-weight: 600;
+                                ">$7.51</p>
+                                  <a target="_blank" href="https://square.link/u/TUyXD0FA?src=embed" style="
+                                  display: inline-block;
+                                  font-size: 18px;
+                                  line-height: 48px;
+                                  height: 48px;
+                                  color: #ffffff;
+                                  min-width: 212px;
+                                  background-color: #E6013D;
+                                  text-align: center;
+                                  box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+                                  border-radius: 50px;
+                                ">Buy now</a>
+                                </div>
+                              </div>
                             </div>
                         </div>
 
@@ -1383,7 +1747,7 @@
             }
         };
     </script>
-    <script>
+    <!-- <script>
         function openTabSubSection(evt, parentSection, subSectionName) {
             // Hide all sub-tab contents
             var subTabContents = document.querySelectorAll(`#${parentSection} .sub-tabcontent`);
@@ -1411,7 +1775,7 @@
                 });
             }
         }
-    </script>
+    </script> -->
     <script>
         document.getElementById('promo-banner').addEventListener('click', function() {
             Swal.fire({
