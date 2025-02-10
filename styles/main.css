@@ -702,3 +702,111 @@ body.dark-mode .sub-tabcontent h6 {
 .sub-tabcontent.active {
     display: block !important;
 } */
+
+/* Currency Converter Styles */
+.currency-converter {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid var(--header-footer-color-light);
+    border-radius: 8px;
+    background-color: var(--background-color-light);
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .currency-converter {
+    border-color: var(--header-footer-color-dark);
+    background-color: var(--background-color-dark);
+}
+
+.currency-converter h4 {
+    color: var(--header-footer-color-light);
+    margin-bottom: 15px;
+}
+
+body.dark-mode .currency-converter h4 {
+    color: var(--header-footer-color-dark);
+}
+
+.currency-select {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.currency-converter select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--header-footer-color-light);
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .currency-converter select {
+    border-color: var(--header-footer-color-dark);
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+.currency-converter select:hover,
+.currency-converter select:focus {
+    border-color: var(--header-footer-color-light);
+    outline: none;
+    box-shadow: 0 0 5px rgba(230, 1, 61, 0.3);
+}
+
+body.dark-mode .currency-converter select:hover,
+body.dark-mode .currency-converter select:focus {
+    border-color: var(--header-footer-color-dark);
+}
+
+.converted-price {
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+#converted-price {
+    font-weight: bold;
+    color: var(--header-footer-color-light);
+}
+
+body.dark-mode #converted-price {
+    color: var(--header-footer-color-dark);
+}
+
+.currency-input {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.currency-converter input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--header-footer-color-light);
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    width: 100px;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .currency-converter input {
+    border-color: var(--header-footer-color-dark);
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+.currency-converter input:hover,
+.currency-converter input:focus {
+    border-color: var(--header-footer-color-light);
+    outline: none;
+    box-shadow: 0 0 5px rgba(230, 1, 61, 0.3);
+}
+
+body.dark-mode .currency-converter input:hover,
+body.dark-mode .currency-converter input:focus {
+    border-color: var(--header-footer-color-dark);
+}
