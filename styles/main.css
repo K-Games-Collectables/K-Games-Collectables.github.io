@@ -810,3 +810,90 @@ body.dark-mode .currency-converter input:hover,
 body.dark-mode .currency-converter input:focus {
     border-color: var(--header-footer-color-dark);
 }
+
+/* Add these to your main.css */
+.navbar,
+.navbar.bg-body-tertiary {  /* Add specificity to override Bootstrap */
+    background-color: #E6013D !important;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .navbar.bg-body-tertiary {
+    background-color: #E6013D !important;
+}
+
+.navbar-nav .nav-link {
+    color: #FFFFFF !important;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+.title-div h1 {
+    color: #FFFFFF;
+}
+
+.nav-tabs .nav-link {
+    color: var(--text-color-light);
+}
+
+body.dark-mode .nav-tabs .nav-link {
+    color: var(--text-color-dark);
+}
+
+.nav-tabs .nav-link.active {
+    background-color: var(--header-footer-color-light);
+    color: #FFFFFF !important;
+    border-color: var(--header-footer-color-light);
+}
+
+body.dark-mode .nav-tabs .nav-link.active {
+    background-color: var(--header-footer-color-dark);
+    border-color: var(--header-footer-color-dark);
+}
+
+.nav-pills-nested .nav-link {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+}
+
+.nav-pills .nav-link {
+    color: var(--text-color-light);
+    border: 1px solid var(--header-footer-color-light);
+    margin-right: 0.5rem;
+}
+
+body.dark-mode .nav-pills .nav-link {
+    color: var(--text-color-dark);
+    border-color: var(--header-footer-color-dark);
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--header-footer-color-light);
+    color: #FFFFFF;
+}
+
+body.dark-mode .nav-pills .nav-link.active {
+    background-color: var(--header-footer-color-dark);
+}
+
+/* Product grid layout */
+.card.product-info {
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
+}
+
+.card.product-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+    object-fit: contain;
+    height: 200px;
+    width: 100%;
+    background: #f8f9fa;
+}
+
+/* Remove any existing Masonry-specific styles */

@@ -1,15 +1,14 @@
 document.getElementById('mode-toggle').addEventListener('click', function() {
-    var body = document.body;
-    var modeIcon = document.getElementById('mode-icon');
-
-    if (body.classList.contains('dark-mode')) {
-        body.classList.remove('dark-mode');
-        modeIcon.src = "images/mode.png";
-        localStorage.setItem('darkMode', 'light'); // Store theme in local storage
-    } else {
-        body.classList.add('dark-mode');
-        modeIcon.src = "images/mode1.png";
-        localStorage.setItem('darkMode', 'dark'); // Store theme in local storage
+    document.body.classList.toggle('dark-mode');
+    // Add Bootstrap dark mode toggle
+    document.body.setAttribute('data-bs-theme', 
+        document.body.classList.contains('dark-mode') ? 'dark' : 'light'
+    );
+    // Update icon
+    const modeIcon = document.getElementById('mode-icon');
+    if (modeIcon) {
+        modeIcon.src = document.body.classList.contains('dark-mode') ? 
+            'images/mode1.png' : 'images/mode.png';
     }
 });
 
