@@ -156,7 +156,7 @@
 
                                     <div class="mb-3">
                                         <label for="currency" class="form-label">Choose a currency:</label>
-                                        <select class="form-select" id="currency" onchange="convertCurrency()">
+                                        <select class="form-select" id="currency">
                                             <option value="USD">USD - US Dollar</option>
                                             <option value="EUR">EUR - Euro</option>
                                             <option value="GBP">GBP - British Pound</option>
@@ -169,7 +169,8 @@
                                         </select>
                                     </div>
 
-                                    <p class="converted-price mb-3">Converted Price: <span id="converted-price" class="fw-bold">0.00</span></p>
+                                    <p class="converted-price mb-3">Converted Price: <span id="converted-price" class="fw-bold">Loading...</span></p>
+                                    <p class="text-muted small mb-0"><small id="last-updated"></small></p>
                                     <p class="mb-0">Missing a currency? <a href="mailto:support@kgamesncollectables.com">Email me</a> and I'll add it!</p>
                                 </div>
                             </div>
@@ -241,7 +242,6 @@
                             <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Pokemon-Singles">Singles</button>
                             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Pokemon-Sealed">Sealed Product</button>
                             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Pokemon-Special">Special Sets</button>
-                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Pokemon-Accessories">Accessories</button>
                         </ul>
 
                         <div class="tab-content">
@@ -447,101 +447,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Accessories Section -->
-                            <div class="tab-pane fade" id="Pokemon-Accessories">
-                                <h5>Pokemon Accessories</h5>
-                                
-                                <ul class="nav nav-pills nav-pills-nested mb-3" role="tablist">
-                                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Accessories-Storage">Storage</button>
-                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Accessories-Protection">Protection</button>
-                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Accessories-Display">Display</button>
-                                </ul>
-
-                                <div class="tab-content">
-                                    <div class="tab-pane fade show active" id="Accessories-Storage">
-                                        <h6>Storage Solutions</h6>
-                                        
-                                        <ul class="nav nav-pills nav-pills-nested mb-3" role="tablist">
-                                            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Storage-Binders">Binders & Pages</button>
-                                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Storage-Boxes">Storage Boxes</button>
-                                        </ul>
-
-                                        <div class="tab-content">
-                                            <div class="tab-pane fade show active" id="Storage-Binders">
-                                                <h6>Binders & Pages</h6>
-                                                <div class="container-fluid">
-                                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                                        <!-- Ultra PRO Premium Pro-Binder -->
-                                                        <div class="col">
-                                                            <div class="card product-info h-100">
-                                                                <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/e006b99b33ada0bcc690609f572fb7d3d2fb12e1/original.jpeg" 
-                                                                     class="card-img-top" 
-                                                                     alt="Ultra PRO Premium Pro-Binder" 
-                                                                     onerror="this.style.display='none'">
-                                                                <div class="card-body">
-                                                                    <p class="card-title">Ultra PRO Premium Pro-Binder</p>
-                                                                    <p class="card-text fw-bold">$64.98</p>
-                                                                    <a target="_blank" 
-                                                                       href="https://square.link/u/SrhJqxeU?src=embed" 
-                                                                       class="btn btn-danger w-100 rounded-pill">Buy now</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="tab-pane fade" id="Storage-Boxes">
-                                                <h6>Storage Boxes</h6>
-                                                <div class="container-fluid">
-                                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                                        <!-- Your existing storage boxes products here -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="tab-pane fade" id="Accessories-Protection">
-                                        <h6>Card Protection</h6>
-                                        <div class="container-fluid">
-                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                                <!-- Your existing protection products here -->
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="tab-pane fade" id="Accessories-Display">
-                                        <h6>Display Items</h6>
-                                        
-                                        <ul class="nav nav-pills nav-pills-nested mb-3" role="tablist">
-                                            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Display-Frames">Frames</button>
-                                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Display-Stands">Stands</button>
-                                        </ul>
-
-                                        <div class="tab-content">
-                                            <div class="tab-pane fade show active" id="Display-Frames">
-                                                <h6>Frames</h6>
-                                                <div class="container-fluid">
-                                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                                        <!-- Your existing frames products here -->
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="tab-pane fade" id="Display-Stands">
-                                                <h6>Stands</h6>
-                                                <div class="container-fluid">
-                                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                                        <!-- Your existing stands products here -->
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -724,144 +629,145 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div id="Hockey-UpperDeck" class="sub-tabcontent">
-                                <h6>Upper Deck 2024-25</h6>
-                                <div class="container-fluid">
-                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                        <!-- Upper Deck products here -->
-                                        <div class="col">
-                                            <div class="card product-info h-100">
-                                                <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/10aa92babbc3cf5a373125745d59ae56dea7b619/original.png" 
-                                                    class="card-img-top" 
-                                                    alt="(1) 2024-25 Upper Deck MVP NHL Hockey Retail Pack (6 Cards)" 
-                                                    onerror="this.style.display='none'">
-                                                <div class="card-body">
-                                                    <p class="card-title">(1) 2024-25 Upper Deck MVP NHL Hockey Retail Pack (6 Cards)</p>
-                                                    <p class="card-text fw-bold">$4.00</p>
-                                                    <a target="_blank" 
-                                                    href="https://square.link/u/aQ6KuX2e?src=embed" 
-                                                    class="btn btn-danger w-100 rounded-pill">Buy now</a>
+                                    
+                                    <div class="tab-pane fade" id="Hockey-UpperDeck">
+                                        <h6>Upper Deck 2024-25</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- Upper Deck products here -->
+                                                <div class="col">
+                                                    <div class="card product-info h-100">
+                                                        <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/10aa92babbc3cf5a373125745d59ae56dea7b619/original.png" 
+                                                            class="card-img-top" 
+                                                            alt="(1) 2024-25 Upper Deck MVP NHL Hockey Retail Pack (6 Cards)" 
+                                                            onerror="this.style.display='none'">
+                                                        <div class="card-body">
+                                                            <p class="card-title">(1) 2024-25 Upper Deck MVP NHL Hockey Retail Pack (6 Cards)</p>
+                                                            <p class="card-text fw-bold">$4.00</p>
+                                                            <a target="_blank" 
+                                                            href="https://square.link/u/aQ6KuX2e?src=embed" 
+                                                            class="btn btn-danger w-100 rounded-pill">Buy now</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div id="Sports-Baseball" class="tab-pane fade">
-                            <h5>Baseball Cards</h5>
-                            
-                            <ul class="nav nav-pills mb-3" role="tablist">
-                                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Baseball-Topps">Topps 2024</button>
-                                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Baseball-Heritage">Heritage</button>
-                                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Baseball-Other">Other Sets</button>
-                            </ul>
+                            <div class="tab-pane fade" id="Sports-Baseball">
+                                <h5>Baseball Cards</h5>
+                                
+                                <ul class="nav nav-pills nav-pills-nested mb-3" role="tablist">
+                                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Baseball-Topps">Topps 2024</button>
+                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Baseball-Heritage">Heritage</button>
+                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Baseball-Other">Other Sets</button>
+                                </ul>
 
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="Baseball-Topps">
-                                    <h6>Topps 2024</h6>
-                                    <div class="container-fluid">
-                                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                            <!-- Your existing Topps products here -->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="Baseball-Topps">
+                                        <h6>Topps 2024</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- Your existing Topps products here -->
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="tab-pane fade" id="Baseball-Heritage">
-                                    <h6>Heritage</h6>
-                                    <div class="container-fluid">
-                                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                            <!-- Your existing Heritage products here -->
+                                    <div class="tab-pane fade" id="Baseball-Heritage">
+                                        <h6>Heritage</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- Your existing Heritage products here -->
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="tab-pane fade" id="Baseball-Other">
-                                    <h6>Other Baseball Sets</h6>
-                                    <div class="container-fluid">
-                                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                            <!-- Your existing Other baseball products here -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="Sports-Basketball" class="tab-pane fade">
-                            <h5>Basketball Cards</h5>
-                            
-                            <ul class="nav nav-pills mb-3" role="tablist">
-                                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Basketball-Panini">Panini</button>
-                                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Basketball-Singles">Singles</button>
-                                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Basketball-Other">Other Sets</button>
-                            </ul>
-
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="Basketball-Panini">
-                                    <h6>Panini Products</h6>
-                                    <div class="container-fluid">
-                                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                            <!-- Your existing Panini products here -->
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade" id="Basketball-Singles">
-                                    <h6>Singles</h6>
-                                    <div class="container-fluid">
-                                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                            <!-- Your existing Basketball singles here -->
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade" id="Basketball-Other">
-                                    <h6>Other Basketball Sets</h6>
-                                    <div class="container-fluid">
-                                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                            <!-- Your existing Other basketball products here -->
+                                    <div class="tab-pane fade" id="Baseball-Other">
+                                        <h6>Other Baseball Sets</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- Your existing Other baseball products here -->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div id="Sports-Football" class="tab-pane fade">
-                            <h5>Football Cards</h5>
-                            
-                            <ul class="nav nav-pills mb-3" role="tablist">
-                                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Football-Panini">Panini</button>
-                                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Football-Singles">Singles</button>
-                                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Football-Other">Other Sets</button>
-                            </ul>
+                            <div class="tab-pane fade" id="Sports-Basketball">
+                                <h5>Basketball Cards</h5>
+                                
+                                <ul class="nav nav-pills nav-pills-nested mb-3" role="tablist">
+                                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Basketball-Panini">Panini</button>
+                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Basketball-Singles">Singles</button>
+                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Basketball-Other">Other Sets</button>
+                                </ul>
 
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="Football-Panini">
-                                    <h6>Panini Products</h6>
-                                    <div class="container-fluid">
-                                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                            <!-- Your existing Football Panini products here -->
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="Basketball-Panini">
+                                        <h6>Panini Products</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- Your existing Panini products here -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="Basketball-Singles">
+                                        <h6>Singles</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- Your existing Basketball singles here -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="Basketball-Other">
+                                        <h6>Other Basketball Sets</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- Your existing Other basketball products here -->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
-                                <div class="tab-pane fade" id="Football-Singles">
-                                    <h6>Singles</h6>
-                                    <div class="container-fluid">
-                                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                            <!-- Your existing Football singles here -->
+                            <div class="tab-pane fade" id="Sports-Football">
+                                <h5>Football Cards</h5>
+                                
+                                <ul class="nav nav-pills nav-pills-nested mb-3" role="tablist">
+                                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Football-Panini">Panini</button>
+                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Football-Singles">Singles</button>
+                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Football-Other">Other Sets</button>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="Football-Panini">
+                                        <h6>Panini Products</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- Your existing Football Panini products here -->
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="tab-pane fade" id="Football-Other">
-                                    <h6>Other Football Sets</h6>
-                                    <div class="container-fluid">
-                                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                            <!-- Your existing Other football products here -->
+                                    <div class="tab-pane fade" id="Football-Singles">
+                                        <h6>Singles</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- Your existing Football singles here -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="Football-Other">
+                                        <h6>Other Football Sets</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- Your existing Other football products here -->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -874,25 +780,25 @@
                         <h4>Board Games</h4>
                         <p>Discover our collection of board games for all ages and player counts.</p>
                         
-                        <ul class="nav nav-pills mb-3" role="tablist">
-                            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#BoardGames-Party" type="button" role="tab">Party Games</button>
-                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#BoardGames-Card" type="button" role="tab">Card Games</button>
-                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#BoardGames-Classics" type="button" role="tab">Classic Games</button>
+                        <ul class="nav nav-pills nav-pills-nested mb-3" role="tablist">
+                            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#BoardGames-Party">Party Games</button>
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#BoardGames-Card">Card Games</button>
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#BoardGames-Classics">Classic Games</button>
                         </ul>
 
                         <div class="tab-content">
-                            <div class="tab-pane fade show active" id="BoardGames-Party" role="tabpanel">
+                            <div class="tab-pane fade show active" id="BoardGames-Party">
                                 <h5>Party Games</h5>
                                 
-                                <ul class="nav nav-pills mb-3" role="tablist">
-                                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Party-Social" type="button" role="tab">Social Deduction</button>
-                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Party-Trivia" type="button" role="tab">Trivia</button>
-                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Party-Word" type="button" role="tab">Word Games</button>
-                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Party-Adult" type="button" role="tab">Adult Games</button>
+                                <ul class="nav nav-pills nav-pills-nested mb-3" role="tablist">
+                                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Party-Social">Social Deduction</button>
+                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Party-Trivia">Trivia</button>
+                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Party-Word">Word Games</button>
+                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Party-Adult">Adult Games</button>
                                 </ul>
 
                                 <div class="tab-content">
-                                    <div class="tab-pane fade show active" id="Party-Social" role="tabpanel">
+                                    <div class="tab-pane fade show active" id="Party-Social">
                                         <h6>Social Deduction Games</h6>
                                         <div class="container-fluid">
                                             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
@@ -901,7 +807,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="tab-pane fade" id="Party-Trivia" role="tabpanel">
+                                    <div class="tab-pane fade" id="Party-Trivia">
                                         <h6>Trivia Games</h6>
                                         <div class="container-fluid">
                                             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
@@ -910,7 +816,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="tab-pane fade" id="Party-Word" role="tabpanel">
+                                    <div class="tab-pane fade" id="Party-Word">
                                         <h6>Word Games</h6>
                                         <div class="container-fluid">
                                             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
@@ -919,7 +825,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="tab-pane fade" id="Party-Adult" role="tabpanel">
+                                    <div class="tab-pane fade" id="Party-Adult">
                                         <h6>Adult Games</h6>
                                         <div class="container-fluid">
                                             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
@@ -930,12 +836,22 @@
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade" id="BoardGames-Card" role="tabpanel">
-                                <!-- Similar structure for Card Games -->
+                            <div class="tab-pane fade" id="BoardGames-Card">
+                                <h5>Card Games</h5>
+                                <div class="container-fluid">
+                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                        <!-- Card games products here -->
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="tab-pane fade" id="BoardGames-Classics" role="tabpanel">
-                                <!-- Similar structure for Classic Games -->
+                            <div class="tab-pane fade" id="BoardGames-Classics">
+                                <h5>Classic Games</h5>
+                                <div class="container-fluid">
+                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                        <!-- Classic games products here -->
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -945,7 +861,7 @@
                         <h4>D&D</h4>
                         <p>Discover our collection of Dungeons & Dragons products.</p>
                         
-                        <ul class="nav nav-pills mb-3" role="tablist">
+                        <ul class="nav nav-pills nav-pills-nested mb-3" role="tablist">
                             <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#D-and-D-Accessories">Accessories</button>
                             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#D-and-D-Books">Books</button>
                             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#D-and-D-Miniatures">Miniatures</button>
@@ -986,7 +902,7 @@
                         <h4>Accessories</h4>
                         <p>Discover our collection of accessories for all your hobbies.</p>
                         
-                        <ul class="nav nav-pills mb-3" role="tablist">
+                        <ul class="nav nav-pills nav-pills-nested mb-3" role="tablist">
                             <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Accessories-Storage">Storage</button>
                             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Accessories-Protection">Protection</button>
                             <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Accessories-Display">Display</button>
@@ -995,27 +911,176 @@
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="Accessories-Storage">
                                 <h5>Storage</h5>
-                                <div class="container-fluid">
-                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                        <!-- Your existing storage products here -->
+                                
+                                <ul class="nav nav-pills nav-pills-nested mb-3" role="tablist">
+                                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Main-Storage-Binders">Binders & Pages</button>
+                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Main-Storage-Boxes">Storage Boxes</button>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="Main-Storage-Binders">
+                                        <h6>Binders & Pages</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- Ultra PRO Premium Pro-Binder -->
+                                                <div class="col">
+                                                    <div class="card product-info h-100">
+                                                        <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/e006b99b33ada0bcc690609f572fb7d3d2fb12e1/original.jpeg" 
+                                                             class="card-img-top" 
+                                                             alt="Ultra PRO Premium Pro-Binder" 
+                                                             onerror="this.style.display='none'">
+                                                        <div class="card-body">
+                                                            <p class="card-title">Ultra PRO Premium Pro-Binder</p>
+                                                            <p class="card-text fw-bold">$64.98</p>
+                                                            <a target="_blank" 
+                                                               href="https://square.link/u/SrhJqxeU?src=embed" 
+                                                               class="btn btn-danger w-100 rounded-pill">Buy now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="Main-Storage-Boxes">
+                                        <h6>Storage Boxes</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- Storage boxes products here -->
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="tab-pane fade" id="Accessories-Protection">
                                 <h5>Protection</h5>
-                                <div class="container-fluid">
-                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                        <!-- Your existing protection products here -->
+                                
+                                <ul class="nav nav-pills nav-pills-nested mb-3" role="tablist">
+                                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Main-Protection-Sleeves">Sleeves</button>
+                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Main-Protection-Toploaders">Toploaders</button>
+                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Main-Protection-Other">Other Protection</button>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="Main-Protection-Sleeves">
+                                        <h6>Card Sleeves</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- 100pk Sleeves -->
+                                                <div class="col">
+                                                    <div class="card product-info h-100">
+                                                        <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/7b1c5e9e759e169a7e0225e8550610e793ba6830/original.jpeg" 
+                                                             class="card-img-top" 
+                                                             alt="100pk Sleeves (1)" 
+                                                             onerror="this.style.display='none'">
+                                                        <div class="card-body">
+                                                            <p class="card-title">100pk Sleeves (1)</p>
+                                                            <p class="card-text fw-bold">$3.67</p>
+                                                            <a target="_blank" 
+                                                               href="https://square.link/u/1iThho3h?src=embed" 
+                                                               class="btn btn-danger w-100 rounded-pill">Buy now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- 1000pk Sleeves -->
+                                                <div class="col">
+                                                    <div class="card product-info h-100">
+                                                        <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/7b1c5e9e759e169a7e0225e8550610e793ba6830/original.jpeg" 
+                                                             class="card-img-top" 
+                                                             alt="1000pk Sleeves" 
+                                                             onerror="this.style.display='none'">
+                                                        <div class="card-body">
+                                                            <p class="card-title">1000pk Sleeves</p>
+                                                            <p class="card-text fw-bold">$32.00</p>
+                                                            <a target="_blank" 
+                                                               href="https://square.link/u/q7D6FuDs?src=embed" 
+                                                               class="btn btn-danger w-100 rounded-pill">Buy now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Ultra●PRO 100 sleeves -->
+                                                <div class="col">
+                                                    <div class="card product-info h-100">
+                                                        <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/7f5c7e855312997c8ee56c7d7919248e47aa3f54/original.jpeg" 
+                                                             class="card-img-top" 
+                                                             alt="Ultra●PRO 100 sleeves" 
+                                                             onerror="this.style.display='none'">
+                                                        <div class="card-body">
+                                                            <p class="card-title">Ultra●PRO 100 sleeves</p>
+                                                            <p class="card-text fw-bold">$3.00</p>
+                                                            <a target="_blank" 
+                                                               href="https://square.link/u/iLtDh9vB?src=embed" 
+                                                               class="btn btn-danger w-100 rounded-pill">Buy now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="Main-Protection-Toploaders">
+                                        <h6>Toploaders</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- Ultra●PRO 25ct Toploaders -->
+                                                <div class="col">
+                                                    <div class="card product-info h-100">
+                                                        <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/215bd1b9273f46e54613b8709024a412cc036dc5/original.png" 
+                                                             class="card-img-top" 
+                                                             alt="Ultra●PRO 25ct Toploaders" 
+                                                             onerror="this.style.display='none'">
+                                                        <div class="card-body">
+                                                            <p class="card-title">Ultra●PRO 25ct Toploaders</p>
+                                                            <p class="card-text fw-bold">$6.49</p>
+                                                            <a target="_blank" 
+                                                               href="https://square.link/u/AB5nrIXx?src=embed" 
+                                                               class="btn btn-danger w-100 rounded-pill">Buy now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="Main-Protection-Other">
+                                        <h6>Other Protection Products</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- Other protection products here -->
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="tab-pane fade" id="Accessories-Display">
                                 <h5>Display</h5>
-                                <div class="container-fluid">
-                                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-                                        <!-- Your existing display products here -->
+                                
+                                <ul class="nav nav-pills nav-pills-nested mb-3" role="tablist">
+                                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#Main-Display-Frames">Frames</button>
+                                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#Main-Display-Stands">Stands</button>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="Main-Display-Frames">
+                                        <h6>Frames</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- Frames products here -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="Main-Display-Stands">
+                                        <h6>Stands</h6>
+                                        <div class="container-fluid">
+                                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                                                <!-- Stands products here -->
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1198,6 +1263,79 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+</script>
+
+<!-- Currency Converter Script -->
+<script>
+    async function fetchExchangeRates() {
+        try {
+            const response = await fetch('https://api.exchangerate-api.com/v4/latest/CAD');
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            const data = await response.json();
+            
+            // Cache the rates in sessionStorage to reduce API calls
+            sessionStorage.setItem('exchangeRates', JSON.stringify(data.rates));
+            sessionStorage.setItem('ratesTimestamp', Date.now().toString());
+            
+            return data.rates;
+        } catch (error) {
+            console.error('Error fetching exchange rates:', error);
+            
+            // Try to use cached rates if available
+            const cachedRates = sessionStorage.getItem('exchangeRates');
+            if (cachedRates) {
+                console.log('Using cached exchange rates');
+                return JSON.parse(cachedRates);
+            }
+            
+            return null;
+        }
+    }
+
+    async function convertCurrency() {
+        // Show loading state
+        document.getElementById('converted-price').textContent = 'Loading...';
+        
+        // Check if we have cached rates that are less than 1 hour old
+        const cachedRates = sessionStorage.getItem('exchangeRates');
+        const timestamp = sessionStorage.getItem('ratesTimestamp');
+        const oneHour = 60 * 60 * 1000; // 1 hour in milliseconds
+        
+        let rates;
+        if (cachedRates && timestamp && (Date.now() - parseInt(timestamp)) < oneHour) {
+            // Use cached rates if they're less than 1 hour old
+            rates = JSON.parse(cachedRates);
+        } else {
+            // Otherwise fetch new rates
+            rates = await fetchExchangeRates();
+        }
+        
+        if (!rates) {
+            document.getElementById('converted-price').textContent = 'Error fetching rates';
+            return;
+        }
+
+        const currency = document.getElementById('currency').value;
+        const priceInCAD = parseFloat(document.getElementById('price').value) || 1;
+        const convertedPrice = (priceInCAD * rates[currency]).toFixed(2);
+        document.getElementById('converted-price').textContent = `${convertedPrice} ${currency}`;
+        
+        // Update the last updated timestamp
+        const lastUpdated = sessionStorage.getItem('ratesTimestamp');
+        if (lastUpdated) {
+            const date = new Date(parseInt(lastUpdated));
+            document.getElementById('last-updated').textContent = `Rates last updated: ${date.toLocaleString()}`;
+        }
+    }
+
+    // Add event listeners for both input and select changes
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('price').addEventListener('input', convertCurrency);
+        document.getElementById('currency').addEventListener('change', convertCurrency);
+        convertCurrency(); // Initial conversion
+    });
 </script>
 </body>
 
