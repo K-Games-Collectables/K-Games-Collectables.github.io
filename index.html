@@ -23,6 +23,45 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .navbar-nav .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: #0dcaf0 !important;
+        }
+        
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #0dcaf0;
+            transition: width 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: #0dcaf0 !important;
+        }
+        
+        .navbar-nav .nav-link.active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #0dcaf0;
+        }
+    </style>
 </head>
 
 <body class="body-class">
@@ -41,6 +80,7 @@
           </div>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="store.html">Store</a></li>
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
               <li class="nav-item"><a class="nav-link" href="blog.html">Blog/Updates</a></li>
@@ -187,25 +227,24 @@
     <script src="scripts/hamburger.js"></script>
     <script src="scripts/darkmode.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             Swal.fire({
-                title: 'Important Shipping Update!',
-                text: 'Canada Post services are resuming. Please check our blog for more information.',
+                title: 'Temporary Site Notice',
+                html: 'This site is currently a temporary version while our main site is under construction. Some products may not be displayed in the shop with our current temporary checkout system. Thank you for your understanding and patience!',
                 icon: 'info',
-                confirmButtonText: 'Read More',
+                confirmButtonText: 'Learn More',
                 showCancelButton: true,
                 cancelButtonText: 'Close',
-                onClose: () => {
-                    Swal.stopTimer();
-                }
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = 'blog.html#2024-12-17'; // Link to the specific blog post
+                    window.location.href = 'blog.html';
                 }
             });
         });
-    </script> -->
+    </script>
     <script>
         document.getElementById('promo-banner').addEventListener('click', function() {
             Swal.fire({
